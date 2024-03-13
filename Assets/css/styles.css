@@ -19,6 +19,11 @@ font-family: sans-serif;
 /* Transiciones */
 --transition: all 0.5s ease-in-out;
 }
+
+#sun-fill {
+    fill: #fdc21c; 
+}
+
 body{
 width: 100%;
 height: 100%; /*Altura*/
@@ -56,6 +61,11 @@ margin:3em;
 width: 100%;
 height: 3em;
 margin: 3em;
+display: flex;
+flex-direction: column;
+justify-content: center; /* Alinea verticalmente los elementos del nav */
+align-items: center; /* Alinea horizontalmente los elementos del nav */
+margin-top: 1em; 
 }
 
 .barnav{
@@ -79,10 +89,10 @@ align-items: center
 }
 
 .menu a{
-text-decoration: none;
-color: black;
-border-bottom: none; /* Elimina la linea inferior por defecto */
-transition: border-bottom 0.5s en;
+    text-decoration: none;
+    color: black;
+    border-bottom: none;
+    transition: border-bottom 0.5s ease-in-out;
 
 }
 
@@ -90,3 +100,9 @@ transition: border-bottom 0.5s en;
 color: black; /*Cambia el color del texto al pasar el cursor por encima*/
 border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por encima*/
 }
+
+
+.dropdown {
+    margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+}
+
