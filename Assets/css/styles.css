@@ -106,3 +106,7 @@ border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color es
     margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
 }
 
+.modo{
+    text-align: center;
+}
+
