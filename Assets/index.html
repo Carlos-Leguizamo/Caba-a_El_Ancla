@@ -14,7 +14,7 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
 
     <section class="caja-logo">
       <img src="./img/logotipo_ancla.png" alt="Logo_Ancla" height="90px" class="logo-principal">
@@ -122,16 +122,55 @@
     </div>
   </div>
 
+  <!-- SECCION DE MISION Y VISION -->
 
   <div class="contenedor-general">
+
     <div class="contenedor-mision">
-    <p>texto de la mision</p>
+      <div class="titulo-mision">
+        <h1><b>MISIÓN </b></h1>
+      </div>
+      <p>Brindar a nuestros huéspedes una experiencia única de hospedaje en un entorno natural incomparable, a orillas
+        de la represa de Yaguara. Ofrecemos un espacio de paz, tranquilidad y confort, donde podrán desconectarse de la
+        rutina y disfrutar de la belleza del paisaje.</p>
     </div>
 
     <div class="contenedor-vision">
-    <p>texto de la vision</p>
+      <div class="titulo-vision">
+        <h1><b>VISIÓN</b></h1>
+      </div>
+      <p>Ser el referente de excelencia en el servicio de hospedaje en la región de Yaguara, Huila. Ser reconocidos por
+        nuestro compromiso con la calidad, la sostenibilidad y la satisfacción de nuestros huéspedes.</p>
     </div>
   </div>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="iconos-redes">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/3155109453?text=Hola%2C%20estoy%20interesado%20en%20tu%20producto/servicio"
+        target="_blank"><i class="fab fa-whatsapp" target="_blank"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter" target="_blank"></i></a>
+    </div>
+    <p>Términos de uso web | Aviso de Privacidad |Política de tratamiento de datos | Reversión de pago |
+      Política de garantias</p>
+    <p><span id="año"></span> Cabaña El Ancla. Reservados todos los derechos</p>
+  </footer>
+
+  <script>
+    const year = new Date().getFullYear();
+    document.getElementById("año").textContent = "© " + year;
+  </script>
+
+  <a class="ir-arriba visible" href="#header" id="botonArriba">
+    <span class="fa-stack">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+
+  <script src="./js/boton-arriba.js"></script>
 
 </body>
 
