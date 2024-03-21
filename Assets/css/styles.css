@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
 
 /* Ocultar Scroll */
 ::-webkit-scrollbar {
@@ -238,14 +238,16 @@ background-color: #256e99;
 
 /* SECCION DE FRASE */
 
-.contenedor-frase{
-width: 100%;
+.contenedor-frase {
+width: 99%;
 height: 200px;
-background-color: beige;
-border-radius: 50px;
+background-color: #CBEFF3;
+border-radius: 100px;
 display: flex;
 justify-content: center;
 align-items: center;
+border: 1px black solid;
+box-shadow: 1px 7px 20px black;
 }
 
 .texto-motivador{
@@ -257,4 +259,114 @@ font-family: fantasy;
 color: black;
 align-items: center;
 font-size: 22px;
+}
+
+/* SECCION MISION Y VISION */
+
+.contenedor-general {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+
+/* MISION */
+
+.contenedor-mision{
+width: 47.5%;
+height: 200px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-mision{
+display: flex;
+}
+
+.titulo-mision h1{
+font-size: 24px;
+color: black;
+margin: 10px 20px 0px 20px;
+}
+
+.contenedor-mision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+}
+
+/* VISION */
+.contenedor-vision {
+width: 47.5%;
+height: 200px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-vision{
+display: flex;
+}
+
+.titulo-vision h1{
+font-size: 24px;
+color: black;
+margin: 10px 20px 0px 20px;
+}
+
+.contenedor-vision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+}
+
+/* FOOTER */
+.footer{
+width: 100%;
+height: auto;
+background-color:#83B1C2 ;
+}
+
+.iconos-redes {
+display: flex;
+justify-content: center;
+color: black;
+}
+
+.iconos-redes a {
+all: unset;
+}
+
+.iconos-redes i {
+font-size: 40px;
+margin: 25px 15px 20px 0;
+}
+
+.iconos-redes a i:hover {
+color: black; /* Cambiar color al pasar el cursor */
+transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+cursor: pointer;
+
+}
+
+.footer p{
+text-align: center;
+color: black;
+}
+
+/* BOTON SUBIR PAGINA */
+
+.ir-arriba{
+font-size:20px;
+color:black;
+cursor:pointer;
+position:fixed;
+bottom:10px;
+right:10px;
+z-index:2;
 }

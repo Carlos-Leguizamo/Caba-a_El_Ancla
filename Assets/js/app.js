@@ -1,6 +1,6 @@
 let imagenes = [
     {
-        "url": "../Caba-a_El_Ancla/Assets/img/img-carrusel/img1.jpg",
+        "url": "./img/img-carrusel/img1.jpg",
         "nombre": "¡BIENVENID@S!",
         "descripcion": "¡Tu refugio junto a la represa de Yaguara! <br> En Cabaña El Ancla encontrarás el lugar perfecto para relajarte y disfrutar de la tranquilidad del campo. Desconecta de la rutina y sumérgete en un entorno natural lleno de paz y belleza, a orillas de la represa de Yaguara."
     },
@@ -13,7 +13,7 @@ let imagenes = [
     {
         "url": "./img/img-carrusel/img3.jpg",
         "nombre": "<br><br>¡TE ESPERAMOS!",
-        "descripcion": "Explora nuestra web para obtener más información sobre nuestra cabaña, las actividades disponibles y las tarifas. También puedes contactarnos directamente para resolver cualquier duda o realizar una reserva. </p> <button class=\"my-button\" onclick=\"window.location.href='../Caba-a_El_Ancla/Assets/views/cabaña.html'\">Conoce mas</button>"
+        "descripcion": "Explora nuestra web para obtener más información sobre nuestra cabaña, las actividades disponibles y las tarifas. También puedes contactarnos directamente para resolver cualquier duda o realizar una reserva. </p> <button class=\"my-button\" onclick=\"window.location.href='./views/cabaña.html'\">Conoce mas</button>"
       }
       
       
