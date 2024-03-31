@@ -24,11 +24,12 @@
 
     <nav class="nav">
 
+      <!-- <input class="layout__nav-responsive" type="checkbox" /> -->
       <ul class="barnav">
         <li class="menu"><a href="index.html"><b>INICIO</b></a></li>
         <li class="menu"><a href="./views/cabaña.html"><b>CABAÑA</b></a></li>
-        <li class="menu"><a href="#"><b>LOCALIZACION</b></a></li>
-        <li class="menu"><a href="#"><b>TARIFAS</b></a></li>
+        <li class="menu"><a href="./views/localizacion.html"><b>LOCALIZACION</b></a></li>
+        <li class="menu"><a href="./views/tarifas.html"><b>TARIFAS</b></a></li>
       </ul>
 
       <!-- SECCION DEL DARK MODE -->
@@ -79,7 +80,7 @@
               Oscuro
             </button>
           </li>
-          <p style="text-align: center;">Seleeciona Modo</p>
+          <p style="text-align: center;">Seleciona Modo</p>
 
         </ul>
       </li>
@@ -87,8 +88,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
       </script>
       <script src="./js/index.js" defer></script>
+      <script src="./js/letra.js"></script>
   </header>
-
+  <!-- SECCION BANNER O CARRUSEL  -->
   <div class="carrusel">
     <div class="atras">
       <img id="atras" src="./img/img-carrusel/atras.svg" alt="atras" loading="lazy">
@@ -144,16 +146,84 @@
     </div>
   </div>
 
+  <!-- SECCION DE VALORES -->
+
+  <!-- TITULO -->
+  <div class="titulo-general">
+    <div class="titulo">
+      <h1 style="color: var(--text-color);"><b><u>CONOCE NUESTROS PRINCIPALES VALORES</u></b></h1>
+    </div>
+  </div>
+
+  <div class="valores-general">
+    <div class="fila">
+      <div class="valor">
+        <h2>RESPONSABILIDAD</h2>
+        <p>Cabaña El Ancla no solo invita a la responsabilidad individual, sino que busca fomentar un compromiso
+          colectivo con el medio ambiente, la comunidad local y la experiencia de los visitantes.
+        </p>
+      </div>
+      <div class="valor">
+        <h2>COMPROMISO</h2>
+        <p>Cabaña El Ancla se erige como un oasis de responsabilidad en el corazón de un entorno natural prístino. Más
+          allá de ofrecer un simple alojamiento, se configura como un paradigma de compromiso con el medio ambiente, la
+          comunidad local y la experiencia de sus visitantes.
+        </p>
+      </div>
+      <div class="valor">
+        <h2>RESPETO</h2>
+        <p>Cabaña El Ancla no solo ofrece un espacio de descanso y desconexión, sino que se erige como un refugio de
+          respeto hacia el huésped, brindándole una experiencia personalizada y memorable.
+        </p>
+      </div>
+      <div class="valor">
+        <h2>AMABILIDAD</h2>
+        <p>Establecemos una comunicación fluida y transparente con nuestros clientes, desde el momento de la reserva
+          hasta el final de su estancia. Nos adaptamos a las necesidades e intereses de cada cliente, ofreciendo
+          soluciones personalizadas y satisfactorias
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="valores-general-2">
+    <div class="fila-2">
+      <div class="valor-2">
+        <h2>SOSTENIBILIDAD</h2>
+        <P>En el Ancla, creemos que la sostenibilidad es un pilar fundamental de nuestro compromiso con el planeta y las
+          generaciones futuras. Por ello, implementamos prácticas sostenibles en todos los aspectos de nuestra cabañ
+        </P>
+        </p>
+      </div>
+      <div class="valor-2">
+        <h2>SEGURIDAD</h2>
+        <p>En Cabaña el Ancla, nos dedicamos a salvaguardar la seguridad de nuestros huéspedes y sus pertenencias. Es
+          por ello que hemos elegido cuidadosamente una ubicación serena y exenta de riesgos, donde tanto los individuos
+          como sus bienes materiales puedan permanecer libres de amenazas o peligros potenciales. </p>
+        </p>
+      </div>
+
+      <div class="valor-2">
+        <h2>AMABILIDAD</h2>
+        <p>Establecemos una comunicación fluida y transparente con nuestros clientes, desde el momento de la reserva
+          hasta el final de su estancia. Nos adaptamos a las necesidades e intereses de cada cliente, ofreciendo
+          soluciones personalizadas y satisfactorias
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
 
   <footer class="footer">
     <div class="iconos-redes">
-      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/3155109453?text=Hola%2C%20estoy%20interesado%20en%20tu%20producto/servicio"
+      <a href="https://www.facebook.com/profile.php?id=100076069230788&mibextid=ZbWKwL" target="_blank"><i
+          class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/3208164195?text=Hola%2C%20estoy%20interesado%20en%20tu%20producto/servicio"
         target="_blank"><i class="fab fa-whatsapp" target="_blank"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter" target="_blank"></i></a>
+
     </div>
-    <p>Términos de uso web | Aviso de Privacidad |Política de tratamiento de datos | Reversión de pago |
+    <p>Términos de uso web | Aviso de Privacidad | Política de tratamiento de datos | Reversión de pago |
       Política de garantias</p>
     <p><span id="año"></span> Cabaña El Ancla. Reservados todos los derechos</p>
   </footer>
@@ -171,7 +241,6 @@
   </a>
 
   <script src="./js/boton-arriba.js"></script>
-
 </body>
 
 </html>

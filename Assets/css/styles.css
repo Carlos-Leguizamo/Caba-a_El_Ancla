@@ -16,10 +16,13 @@ font-family: sans-serif, monospace;
 }
 :root {
 --background: linear-gradient(90deg, white 25%, #256e99 75%);
---text-color: #ececec;
-
+--text-color: #000;
+--light-text-color: #000; /* Color del texto en modo claro */
+--dark-text-color: #fff; /* Color del texto en modo oscuro */
+--light-background: var(--background);
+--dark-background: #212529;
 /* Transiciones */
---transition: all 0.5s ease-in-out;
+--transition: all 0.2s ease-in-out;
 }
 
 #sun-fill {
@@ -28,16 +31,17 @@ fill: #fdc21c;
 
 body{
 width: 100%;
-height: 100%; /*Altura*/
+height: 100%;
 margin: 0;
 padding: 0;
 font-family: Arial, Helvetica, sans-serif;
-background-color:white;
+color: var(--text-color);
+background-color: var(--light-background);
+transition: var(--transition);
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: center;
-
 }
 
 .header {
@@ -322,6 +326,90 @@ margin: 10px 20px 0px 20px;
 .contenedor-vision p{
 text-align: justify;
 margin: 5px 20px;
+color: black;
+}
+
+/* SECCION VALORES */
+
+/* TITULO DE VALORES */
+.titulo-general
+{
+width: 100%;
+height: auto;
+display: flex;
+}
+
+.titulo{
+width: 100%;
+height: auto;
+margin-top: 20px;
+}
+
+.titulo h1{
+color: black;
+font-size: 30px;
+text-align: center;
+font-family: sans-serif;
+
+}
+
+/* VALORES */
+
+.valores-general p{
+text-align: justify;
+}
+
+.fila {
+display: flex;
+gap: 40px;
+justify-content: center;
+margin-top: 10px;
+margin-bottom: 10px
+}
+
+.valor {
+width: 90%;
+margin: 0 10px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: center;
+border: 2px solid #256e99;
+background-color: beige;
+}
+
+.valor h2, p {
+margin-bottom: 10px;
+color: black;
+}
+
+/* SECCION 2 */
+
+.valores-general-2 p{
+text-align: justify;
+}
+
+.fila-2 {
+display: flex;
+gap: 40px;
+justify-content: center;
+margin-top: 10px;
+margin-bottom: 10px
+}
+
+.valor-2 {
+width: 80%;
+margin: 0 10px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: center;
+border: 2px solid #256e99;
+background-color: beige;
+}
+
+.valor-2 h2, p {
+margin-bottom: 10px;
 color: black;
 }
 

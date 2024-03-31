@@ -1,0 +1,411 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+/* Ocultar Scroll */
+::-webkit-scrollbar {
+display: none;
+}
+
+:-moz-scrollbar {
+display: none;
+}
+*{
+margin:0; /*Es todo lo fuera de la pagina, la margen de ella*/
+padding: 0; /*Es el borde dentro de la pagina, despues de la margen de la pagina*/
+box-sizing: border-box;
+font-family: sans-serif, monospace;
+}
+:root {
+--background: linear-gradient(90deg, white 25%, #256e99 75%);
+--text-color: #000;
+--light-text-color: #000; /* Color del texto en modo claro */
+--dark-text-color: #fff; /* Color del texto en modo oscuro */
+--light-background: var(--background);
+--dark-background: #212529;
+/* Transiciones */
+--transition: all 0.2s ease-in-out;
+}
+
+#sun-fill {
+fill: #fdc21c;
+}
+
+body{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: var(--text-color);
+background-color: var(--light-background);
+transition: var(--transition);
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+
+.header {
+width: 100%;
+height: 5em;
+background: var(--background);
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+}
+
+.caja-logo{
+width: 50%;
+height: 2em;
+display: flex;
+justify-content: flex-start;
+align-items:center ;
+}
+
+.logo-principal{
+margin:3em;
+}
+
+.nav{
+width: 100%;
+height: 3em;
+margin: 3em;
+display: flex;
+flex-direction: column;
+justify-content: center; /* Alinea verticalmente los elementos del nav */
+align-items: center; /* Alinea horizontalmente los elementos del nav */
+margin-top: 1em;
+}
+
+.barnav{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.menu{
+width: 15%;
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center
+
+}
+
+.menu a{
+text-decoration: none;
+color: black;
+border-bottom: none;
+transition: border-bottom 0.5s ease-in-out;
+
+}
+
+.menu:hover a{
+color: black; /*Cambia el color del texto al pasar el cursor por encima*/
+border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
+encima*/
+}
+
+.dropdown {
+margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+}
+
+.modo{
+text-align: center;
+}
+
+/* ESTILOS DE LAS TABLAS CATEGORIAS */
+/* TEMPORADA ALTA ESPECIAL */
+.contenido {
+display: flex;
+align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.tabla-temporadas-alta {
+width: 100px;
+height: 50px;
+border-collapse: collapse;
+border-color: black;
+}
+
+.th-temporadas-alta {
+padding: 10px;
+text-align: center; /* Centra el contenido de las celdas */
+background-color: rgb(114, 184, 114);
+color: black;
+}
+
+.texto {
+margin-left: 10px; /* Espacio entre la tabla y el párrafo */
+font-size: 14px;
+text-align: justify; /* Justifica el texto */
+
+}
+
+.general-temporadas {
+width: 80%;
+height: auto;
+margin: 10PX auto; /* Centra el contenido horizontalmente */
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+color: var(--text-color);
+background-color: var(--light-background);
+transition: var(--transition);
+}
+/* ESTILOS DEL TITULO */
+
+.titulo-temporadas {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.titulo-temporadas h1 {
+font-size: 24px;
+margin-bottom: 5px;
+}
+
+.titulo-temporadas h2 {
+font-size: 18px;
+margin-top: 0;
+}
+
+.informacion-temporadas{
+margin: 0 auto;
+}
+
+.tabla-temporadas{
+width: 100px;
+height: 50px;
+border-collapse: collapse;
+border-color: black;
+}
+
+.th-temporadas{
+padding: 10px;
+text-align: center; /* Centra el contenido de las celdas */
+background-color: yellow;
+color: black;
+
+}
+
+/* TEMPORADA ALTA */
+
+.informacion-temporadas-alta{
+margin: 10px auto;
+}
+
+.tabla-temporadas-alta{
+width: 100px;
+height: 50px;
+border-collapse: collapse;
+border-color: black;
+}
+
+.th-temporadas-alta{
+padding: 10px;
+text-align: center; /* Centra el contenido de las celdas */
+background-color: rgb(114, 184, 114);
+color: black;
+
+}
+
+/* TEMPORADA MEDIA */
+.informacion-temporadas-media{
+margin: 10px auto;
+}
+
+.tabla-temporadas-media{
+width: 100px;
+height: 50px;
+border-collapse: collapse;
+border-color: black;
+}
+
+.th-temporadas-media{
+padding: 10px;
+text-align: center; /* Centra el contenido de las celdas */
+background-color:rgb(255, 200, 209);
+color: black;
+
+}
+
+/* TEMPORADA BAJA */
+.informacion-temporadas-baja{
+margin: 10px auto;
+}
+
+.tabla-temporadas-baja{
+width: 100px;
+height: 50px;
+border-collapse: collapse;
+border-color: black;
+}
+
+.th-temporadas-baja{
+padding: 10px;
+text-align: center; /* Centra el contenido de las celdas */
+background-color:rgb(198, 101, 198);
+color: black;
+
+}
+
+/* ESTILOS DE LAS TABLAS TARIFAS */
+.general-tarifas {
+width: 80%;
+margin: 10px auto; /* Centra el contenido horizontalmente */
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+color: var(--text-color);
+}
+
+/* ESTILOS DEL TITULO */
+.titulo{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.titulo h1 {
+font-size: 24px;
+margin-bottom: 5px;
+}
+
+/* ESTILOS DE LAS TABLAS */
+.informacion-alta-especial,
+.informacion-alta,
+.informacion-media,
+.informacion-baja {
+width: 20%; /* Ancho de cada tabla */
+display: inline-block; /* Para colocar las tablas en columnas */
+vertical-align: top; /* Alinear en la parte superior */
+text-align:center; /* Alinear el contenido de las tablas al centro */
+margin-left: 48px;
+}
+
+.titulo-categoria-alta-especial,
+.titulo-categoria-alta,
+.titulo-categoria-media,
+.titulo-categoria-baja {
+text-align: center; /* Alinear el texto de los títulos al centro */
+}
+
+/* Alinear texto al centro */
+th, td
+{
+padding: 10px;
+text-align: center;
+}
+
+.precio{
+padding: 10px;
+text-align: center;
+color: #000;
+}
+/* Establecer color de fondo y texto para las celdas de encabezado */
+th {
+background-color: #333;
+color: #fff;
+}
+
+/* Estilos para filas alternadas */
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+/* Transición al hacer hover */
+.table-informacion-alta-especial:hover,
+.table-informacion-alta:hover,
+.table-informacion-media:hover,
+.table-informacion-baja:hover {
+transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+transition: transform 0 ease; /* Restaurar la transición */
+}
+
+/* Estilos para la sección de admisión de mascotas */
+
+.admission-section {
+background-color: transparent;
+padding: 50px 0;
+
+}
+
+.admission-section h1 {
+text-align: center;
+font-size: 24px;
+margin-bottom: 5px;
+}
+
+.admission-section p {
+text-align: justify;
+margin-bottom: 20px;
+}
+
+.admission-section ul {
+list-style-type: disc;
+padding-left: 20px;
+margin-bottom: 20px;
+}
+
+.admission-section ul li {
+margin-bottom: 10px;
+}
+
+.admission-section ul li:last-child {
+margin-bottom: 0;
+}
+
+/* FOOTER */
+
+.footer {
+width: 100%;
+height: auto;
+background-color: #83B1C2;
+margin-top: 20px;
+}
+
+.iconos-redes {
+display: flex;
+justify-content: center;
+color: black;
+}
+
+.iconos-redes a {
+all: unset;
+}
+
+.iconos-redes i {
+font-size: 40px;
+margin: 25px 15px 20px 0;
+}
+
+.iconos-redes a i:hover {
+color: black;
+/* Cambiar color al pasar el cursor */
+transform: scale(1.1);
+/* Aumentar tamaño al pasar el cursor */
+cursor: pointer;
+
+}
+
+.footer p {
+text-align: center;
+color: black;
+}
+
+/* BOTON SUBIR PAGINA */
+
+.ir-arriba {
+font-size: 20px;
+color: black;
+cursor: pointer;
+position: fixed;
+bottom: 10px;
+right: 10px;
+z-index: 2;
+}

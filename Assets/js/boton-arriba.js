@@ -5,7 +5,7 @@ function irArriba(pxPantalla){
         var botonArriba = document.getElementById('botonArriba');
 
 
-        if(scroll >500){
+        if(scroll >300){
             botonArriba.style.right = 20 + "px";
         }else{
             botonArriba.style.right = -500 + "px";
@@ -13,4 +13,4 @@ function irArriba(pxPantalla){
     })
 }
 
-irArriba(500);
+irArriba(300);
