@@ -336,6 +336,23 @@ font-size: 14px; /* Reducir el tamaño del texto del footer */
 }
 }
 
+/* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
+
+.btn-link.nav-link.dropdown-toggle{
+margin-top: 10px;
+margin-right: 35px;
+
+}
+
+.dropdown-menu.dropdown-menu-end {
+min-width: 70px; /* Elimina el ancho mínimo */
+width: auto; /* Establece el ancho automático basado en el contenido */
+max-width: 100%; /* Establece el ancho máximo al 100% */
+margin-right: -5px;
+margin-bottom: 35px;
+height: 78px;
+}
+
 /* RESPONSIVE NAV */
 
 .layout__nav-responsive{
@@ -347,8 +364,8 @@ height: 6px;
 border-radius: 4px;
 background-color: black;
 right: 2rem;
-cursor: pointer; 
-margin-right: 20px; 
+cursor: pointer;
+margin-right: 20px;
 }
 
 .layout__nav-responsive::after{
@@ -416,8 +433,6 @@ color: var(--background);
 font-size: 2.1rem;
 }
 
-
-
 .no-scroll {
 overflow: hidden;
 }
@@ -440,7 +455,7 @@ height: 78px;
 
 /* RESPONSIVE PARA TABLETS*/
 
-@media (min-width: 800px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
 .contenedor-texto {
 margin: 30px; /* Centra el contenedor de texto horizontalmente */
@@ -490,7 +505,7 @@ margin: 5px; /* Elimina el margen izquierdo y derecho */
 .imagenes img {
 width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
 height: 350px; /* Mantiene la relación de aspecto de la imagen */
-margin-left: 90px;
+margin-left: 80px;
 }
 .footer {
 height: auto; /* Ajustar la altura automáticamente según el contenido */
@@ -507,32 +522,45 @@ font-size: 20px; /* Reducir el tamaño del texto del footer */
 }
 }
 
-/* RESPONSIVE PARA PORTATILES */
-
 /* IPAD PRO TAMAÑO 1024x1366 */
 
 @media (min-width: 1024px) and (max-width: 1366px) {
+/* Boton del Dark Mode */
+.btn-link.nav-link.dropdown-toggle{
+margin-top: 0px;
+margin-right: 35px;
+
+}
+
+.dropdown-menu.dropdown-menu-end {
+min-width: 70px; /* Elimina el ancho mínimo */
+width: auto; /* Establece el ancho automático basado en el contenido */
+max-width: 100%; /* Establece el ancho máximo al 100% */
+margin-right: -5px;
+margin-bottom: 35px;
+height:76px;
+}
 .titulo {
-margin-left: 100px; /* Ajustar el margen izquierdo para centrar el título */
+text-align: center; /* Ajustar el margen izquierdo para centrar el título */
 
 }
 .contenedor-parrafo {
-margin: 0px/* Ajustar los márgenes para los párrafos */
+margin-left: 80px/* Ajustar los márgenes para los párrafos */
 
 }
 .Subtitulo {
 text-align: center;
-font-size: 40px; /* Reducir el tamaño del subtítulo */
+font-size: 50px; /* Reducir el tamaño del subtítulo */
 }
 .imagenes {
 width: 80%;
 margin-top: 2%;
 display: grid;
 grid-template-columns: repeat(3, 1fr); /* Dos columnas */
-gap: 20px;
+gap: 60px;
 justify-content: start; /* Alinea el contenido a la izquierda */
 align-items: start;
-margin-left: 55px;
+margin-left: 30px;
 }
 
 .img-seccionadas{
@@ -544,6 +572,11 @@ height: 100x;
 /* RESPONSIVE PARA PORTATILES EN GENERAL */
 @media (min-width: 1250PX) and (max-width: 1920px){
 
+.contenedor-parrafo {
+margin-left: 4px;
+text-align: justify;
+justify-content:center;
+}
 .imagenes {
 width: 80%;
 margin-top: 2%;
