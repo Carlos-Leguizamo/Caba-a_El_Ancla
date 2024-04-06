@@ -242,7 +242,7 @@ z-index: 2;
 /* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
 
 .btn-link.nav-link.dropdown-toggle{
-margin-top: 10px;
+margin-top: 0px;
 margin-right: 35px;
 
 }
@@ -253,7 +253,7 @@ width: auto; /* Establece el ancho automático basado en el contenido */
 max-width: 100%; /* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
-height: 78px;
+height:78px;
 }
 
 /* RESPONSIVE NAV */
@@ -292,7 +292,7 @@ bottom: -0.8rem;
 
 }
 
-/* RESPONSIVE NAV CELULARES */
+/* RESPONSIVE NAV Y CELULARES */
 
 @media (max-width: 760px) {
 
@@ -383,8 +383,6 @@ margin: 15px 10px; /* Ajustar el margen de los iconos */
 font-size: 18px; /* Reducir el tamaño del texto del footer */
 }
 }
-
-
 
 /* RESPONSIVE IPAD PRO */
 

@@ -10,8 +10,8 @@ display: none;
 display: none;
 }
 
-*{
-margin:0;
+* {
+margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: sans-serif;
@@ -20,8 +20,10 @@ font-family: sans-serif;
 :root {
 --background: linear-gradient(90deg, white 25%, #256e99 75%);
 --text-color: #000;
---light-text-color: #000; /* Color del texto en modo claro */
---dark-text-color: #fff; /* Color del texto en modo oscuro */
+--light-text-color: #000;
+/* Color del texto en modo claro */
+--dark-text-color: #fff;
+/* Color del texto en modo oscuro */
 --light-background: var(--background);
 --dark-background: #212529;
 /* Transiciones */
@@ -32,7 +34,7 @@ font-family: sans-serif;
 fill: #fdc21c;
 }
 
-body{
+body {
 width: 100%;
 height: 100%;
 margin: 0;
@@ -58,38 +60,43 @@ justify-content: flex-end;
 align-items: center;
 }
 
-.caja-logo{
+.caja-logo {
 width: 50%;
 height: 2em;
 display: flex;
 justify-content: flex-start;
-align-items:center ;
+align-items: center;
 }
 
-.logo-principal{
-margin:3em;
+.logo-principal {
+margin: 3em;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+/* Elimina el ancho mínimo */
+width: auto;
+/* Establece el ancho automático basado en el contenido */
+max-width: 100%;
+/* Establece el ancho máximo al 100% */
 margin-bottom: 35px;
 height: 78px;
 }
 
-.nav{
+.nav {
 width: 100%;
 height: 3em;
 margin: 3em;
 display: flex;
 flex-direction: column;
-justify-content: center; /* Alinea verticalmente los elementos del nav */
-align-items: center; /* Alinea horizontalmente los elementos del nav */
+justify-content: center;
+/* Alinea verticalmente los elementos del nav */
+align-items: center;
+/* Alinea horizontalmente los elementos del nav */
 margin-top: 1em;
 }
 
-.barnav{
+.barnav {
 width: 100%;
 height: 100%;
 display: flex;
@@ -99,7 +106,7 @@ align-items: center;
 
 }
 
-.menu{
+.menu {
 width: 15%;
 height: 100%;
 display: flex;
@@ -108,7 +115,7 @@ justify-content: center;
 align-items: center;
 }
 
-.menu a{
+.menu a {
 text-decoration: none;
 color: black;
 border-bottom: none;
@@ -116,31 +123,34 @@ transition: border-bottom 0.5s ease-in-out;
 
 }
 
-.menu:hover a{
+.menu:hover a {
 color: black;
-border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
+border-bottom: 2px solid black;
+/*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
 encima*/
 }
 
 .dropdown {
-margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+margin-left: -2em;
+/* Ajusta el margen izquierdo del botón dropdown */
 }
 
-.modo{
+.modo {
 text-align: center;
 }
 
 /* SECCION DEL TEXTO */
 
-.contenedor-texto{
+.contenedor-texto {
 width: 96%;
 height: 10%;
 animation: slide-left 0.6s linear both;
 margin: 10px 20px 20px 200px;
-display:flex;
-background-color:transparent;
+display: flex;
+background-color: transparent;
 padding: 10px 20px;
-color: var(--text-color);;
+color: var(--text-color);
+;
 
 }
 
@@ -148,23 +158,24 @@ color: var(--text-color);;
 0% {
 transform: translateX(0);
 }
+
 100% {
 transform: translateX(-100px);
 }
 }
 
-.text{
+.text {
 width: 100%;
 }
 
-.contenedor-encabezado{
+.contenedor-encabezado {
 text-align: center;
 display: flex;
 justify-content: center;
 
 }
 
-.contenedor-parrafo{
+.contenedor-parrafo {
 width: 100%;
 text-align: justify;
 color: black;
@@ -176,10 +187,12 @@ text-align: center;
 
 /* SECCION IMAGENES */
 
-div > img {
+div>img {
 border-radius: 8px;
-width: 400px; /* Ancho fijo para todas las imágenes */
-height: 400px; /*Alto fijo para todas las imágenes */
+width: 400px;
+/* Ancho fijo para todas las imágenes */
+height: 400px;
+/*Alto fijo para todas las imágenes */
 box-shadow: 0px 0px 20px #000;
 transition: 0.3s;
 max-width: 400px;
@@ -192,13 +205,13 @@ img:hover {
 transform: scale(1.1);
 }
 
-.contenedor-img{
+.contenedor-img {
 width: 100%;
 height: 100%;
 margin: 0 50px 0 20px;
 display: flex;
 align-items: flex-start;
-justify-content:flex-start;
+justify-content: flex-start;
 
 }
 
@@ -206,14 +219,16 @@ justify-content:flex-start;
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+grid-template-columns: repeat(3, 1fr);
+/* Dos columnas */
 gap: 20px;
-justify-content: start; /* Alinea el contenido a la izquierda */
+justify-content: start;
+/* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 55px;
 }
 
-.img-seccionadas{
+.img-seccionadas {
 width: 400px;
 height: 100x;
 }
@@ -265,97 +280,121 @@ cursor: pointer;
 position: fixed;
 bottom: 10px;
 right: 10px;
-z-index:2;
+z-index: 2;
 }
+
 /* ---------------------------------------------------------- */
 
 /* RESPONSIVE */
 
 @media only screen and (max-width: 800px) {
+
 /* Estilos para móviles pequeños */
 .contenedor-texto {
-margin: 30px; /* Centra el contenedor de texto horizontalmente */
-width: 80%; /* Ancho del contenedor de texto */
+margin: 30px;
+/* Centra el contenedor de texto horizontalmente */
+width: 80%;
+/* Ancho del contenedor de texto */
 text-align: justify;
 }
 
-.titulo{
+.titulo {
 margin-left: 180px;
 text-align: center;
-justify-content:center;
+justify-content: center;
 }
 
 .contenedor-parrafo {
 margin: 10px 10px 0px 90px;
 font-size: 14px;
 text-align: justify;
-justify-content:center;
+justify-content: center;
 }
+
 .texto {
 text-align: center;
 margin: 30px;
 }
 
-.Subtitulo{
+.Subtitulo {
 text-align: center;
 justify-content: center;
 margin-left: 190px;
 }
 
-div > img {
-width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
-height: auto; /* Se ajustará automáticamente manteniendo la proporción */
-max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-margin: 0 auto; /* Centra la imagen horizontalmente */
+div>img {
+width: 100%;
+/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+height: auto;
+/* Se ajustará automáticamente manteniendo la proporción */
+max-width: 100%;
+/* Asegura que la imagen no se desborde del contenedor */
+margin: 0 auto;
+/* Centra la imagen horizontalmente */
 }
 
 .imagenes {
-display: flex; /* Cambia el contenedor de imágenes a un flexbox */
-flex-direction: column; /* Coloca las imágenes en una columna */
-align-items: center; /* Centra las imágenes horizontalmente */
-margin: 5px; /* Elimina el margen izquierdo y derecho */
+display: flex;
+/* Cambia el contenedor de imágenes a un flexbox */
+flex-direction: column;
+/* Coloca las imágenes en una columna */
+align-items: center;
+/* Centra las imágenes horizontalmente */
+margin: 5px;
+/* Elimina el margen izquierdo y derecho */
 }
 
 .imagenes img {
-width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
-height: 200px; /* Mantiene la relación de aspecto de la imagen */
+width: 100%;
+/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+height: 200px;
+/* Mantiene la relación de aspecto de la imagen */
 margin-left: 40px;
 }
+
 .footer {
-height: auto; /* Ajustar la altura automáticamente según el contenido */
-padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+height: auto;
+/* Ajustar la altura automáticamente según el contenido */
+padding: 20px;
+/* Agregar un poco de espacio alrededor del contenido */
 }
 
 .iconos-redes i {
-font-size: 30px; /* Reducir el tamaño de los iconos de redes sociales */
-margin: 15px 10px; /* Ajustar el margen de los iconos */
+font-size: 30px;
+/* Reducir el tamaño de los iconos de redes sociales */
+margin: 15px 10px;
+/* Ajustar el margen de los iconos */
 }
 
 .footer p {
-font-size: 14px; /* Reducir el tamaño del texto del footer */
+font-size: 14px;
+/* Reducir el tamaño del texto del footer */
 }
 }
 
 /* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
 
-.btn-link.nav-link.dropdown-toggle{
-margin-top: 10px;
+.btn-link.nav-link.dropdown-toggle {
+margin-top: 0px;
 margin-right: 35px;
 
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+/* Elimina el ancho mínimo */
+width: auto;
+/* Establece el ancho automático basado en el contenido */
+max-width: 100%;
+/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
-height: 78px;
+height: 78px;
 }
 
 /* RESPONSIVE NAV */
 
-.layout__nav-responsive{
+.layout__nav-responsive {
 display: none;
 position: absolute;
 appearance: none;
@@ -368,7 +407,7 @@ cursor: pointer;
 margin-right: 20px;
 }
 
-.layout__nav-responsive::after{
+.layout__nav-responsive::after {
 content: "";
 position: absolute;
 width: 100%;
@@ -378,7 +417,8 @@ border-radius: 4px;
 top: -0.8rem;
 
 }
-.layout__nav-responsive::before{
+
+.layout__nav-responsive::before {
 content: "";
 position: absolute;
 width: 100%;
@@ -389,13 +429,14 @@ bottom: -0.8rem;
 
 }
 
-/* RESPONSIVE NAV CELULARES */
+/* RESPONSIVE NAV Y CELULARES */
 
 @media (max-width: 760px) {
 
-.caja-logo{
+.caja-logo {
 margin-left: -55px;
 }
+
 .layout__nav-responsive {
 display: flex;
 z-index: 999;
@@ -407,7 +448,7 @@ margin-right: 55px;
 display: none;
 }
 
-.layout__nav-responsive:checked ~ .barnav {
+.layout__nav-responsive:checked~.barnav {
 z-index: 1;
 display: flex;
 flex-direction: column;
@@ -417,18 +458,20 @@ position: fixed !important;
 top: 80px;
 left: 0;
 width: 100%;
-height: calc(100% - 80px); /* Ajuste de la altura del menú */
+height: calc(100% - 80px);
+/* Ajuste de la altura del menú */
 background-color: #b4cbd9;
-color: var(--light-text-color); /*Variable para mantener el texto del nav desplegable en negro*/
+color: var(--light-text-color);
+/*Variable para mantener el texto del nav desplegable en negro*/
 }
 
-.layout__nav-responsive:checked ~ .barnav .menu {
+.layout__nav-responsive:checked~.barnav .menu {
 flex-grow: 1;
 margin-left: -30px;
 }
 
 /* Estilos adicionales para los enlaces del menú */
-.layout__nav-responsive:checked ~ .barnav .menu a {
+.layout__nav-responsive:checked~.barnav .menu a {
 color: var(--background);
 font-size: 2.1rem;
 }
@@ -437,16 +480,19 @@ font-size: 2.1rem;
 overflow: hidden;
 }
 
-.btn-link.nav-link.dropdown-toggle{
+.btn-link.nav-link.dropdown-toggle {
 margin-top: 10px;
 margin-right: 35px;
 
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+/* Elimina el ancho mínimo */
+width: auto;
+/* Establece el ancho automático basado en el contenido */
+max-width: 100%;
+/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
@@ -458,132 +504,168 @@ height: 78px;
 @media (min-width: 768px) and (max-width: 1024px) {
 
 .contenedor-texto {
-margin: 30px; /* Centra el contenedor de texto horizontalmente */
-width: 80%; /* Ancho del contenedor de texto */
+margin: 30px;
+/* Centra el contenedor de texto horizontalmente */
+width: 80%;
+/* Ancho del contenedor de texto */
 text-align: justify;
 }
 
-.titulo{
+.titulo {
 margin-left: 180px;
 text-align: center;
-font-size: 50px ;
-justify-content:center;
+font-size: 50px;
+justify-content: center;
 }
 
 .contenedor-parrafo {
 margin: 10px 10px 0px 90px;
 font-size: 20px;
 text-align: justify;
-justify-content:center;
+justify-content: center;
 }
+
 .texto {
 text-align: center;
 margin: 30px;
 }
 
-.Subtitulo{
+.Subtitulo {
 text-align: center;
 justify-content: center;
 margin-left: 190px;
 font-size: 40px;
 }
 
-div > img {
-width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
-height: auto; /* Se ajustará automáticamente manteniendo la proporción */
-max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-margin: 0 auto; /* Centra la imagen horizontalmente */
+div>img {
+width: 100%;
+/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+height: auto;
+/* Se ajustará automáticamente manteniendo la proporción */
+max-width: 100%;
+/* Asegura que la imagen no se desborde del contenedor */
+margin: 0 auto;
+/* Centra la imagen horizontalmente */
 }
 
 .imagenes {
-display: flex; /* Cambia el contenedor de imágenes a un flexbox */
-flex-direction: column; /* Coloca las imágenes en una columna */
-align-items: center; /* Centra las imágenes horizontalmente */
-margin: 5px; /* Elimina el margen izquierdo y derecho */
+display: flex;
+/* Cambia el contenedor de imágenes a un flexbox */
+flex-direction: column;
+/* Coloca las imágenes en una columna */
+align-items: center;
+/* Centra las imágenes horizontalmente */
+margin: 5px;
+/* Elimina el margen izquierdo y derecho */
 }
 
 .imagenes img {
-width: 100%; /* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
-height: 350px; /* Mantiene la relación de aspecto de la imagen */
+width: 100%;
+/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
+height: 350px;
+/* Mantiene la relación de aspecto de la imagen */
 margin-left: 80px;
 }
+
 .footer {
-height: auto; /* Ajustar la altura automáticamente según el contenido */
-padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+height: auto;
+/* Ajustar la altura automáticamente según el contenido */
+padding: 20px;
+/* Agregar un poco de espacio alrededor del contenido */
 }
 
 .iconos-redes i {
-font-size: 40px; /* Reducir el tamaño de los iconos de redes sociales */
-margin: 15px 10px; /* Ajustar el margen de los iconos */
+font-size: 40px;
+/* Reducir el tamaño de los iconos de redes sociales */
+margin: 15px 10px;
+/* Ajustar el margen de los iconos */
 }
 
 .footer p {
-font-size: 20px; /* Reducir el tamaño del texto del footer */
+font-size: 20px;
+/* Reducir el tamaño del texto del footer */
 }
 }
 
 /* IPAD PRO TAMAÑO 1024x1366 */
 
 @media (min-width: 1024px) and (max-width: 1366px) {
+
 /* Boton del Dark Mode */
-.btn-link.nav-link.dropdown-toggle{
+.btn-link.nav-link.dropdown-toggle {
 margin-top: 0px;
 margin-right: 35px;
 
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+/* Elimina el ancho mínimo */
+width: auto;
+/* Establece el ancho automático basado en el contenido */
+max-width: 100%;
+/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
-height:76px;
+height: 76px;
 }
+
 .titulo {
-text-align: center; /* Ajustar el margen izquierdo para centrar el título */
+text-align: center;
+/* Ajustar el margen izquierdo para centrar el título */
 
 }
+
 .contenedor-parrafo {
-margin-left: 80px/* Ajustar los márgenes para los párrafos */
+margin-left: 80px
+/* Ajustar los márgenes para los párrafos */
 
 }
+
 .Subtitulo {
 text-align: center;
-font-size: 50px; /* Reducir el tamaño del subtítulo */
+font-size: 50px;
+/* Reducir el tamaño del subtítulo */
 }
+
 .imagenes {
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+grid-template-columns: repeat(3, 1fr);
+/* Dos columnas */
 gap: 60px;
-justify-content: start; /* Alinea el contenido a la izquierda */
+justify-content: start;
+/* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 30px;
 }
 
-.img-seccionadas{
+.img-seccionadas {
 width: 400px;
 height: 100x;
 }
 
 }
+
 /* RESPONSIVE PARA PORTATILES EN GENERAL */
-@media (min-width: 1250PX) and (max-width: 1920px){
+@media (min-width: 1250PX) and (max-width: 1920px) {
 
 .contenedor-parrafo {
 margin-left: 4px;
 text-align: justify;
-justify-content:center;
+justify-content: center;
 }
+
 .imagenes {
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+grid-template-columns: repeat(3, 1fr);
+/* Dos columnas */
 gap: 20px;
-justify-content: start; /* Alinea el contenido a la izquierda */
+justify-content: start;
+/* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 0px;
 }
