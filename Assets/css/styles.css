@@ -458,3 +458,386 @@ bottom:10px;
 right:10px;
 z-index:2;
 }
+
+/* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
+
+.btn-link.nav-link.dropdown-toggle{
+margin-top: 0px;
+margin-right: 35px;
+
+}
+
+.dropdown-menu.dropdown-menu-end {
+min-width: 70px; /* Elimina el ancho mínimo */
+width: auto; /* Establece el ancho automático basado en el contenido */
+max-width: 100%; /* Establece el ancho máximo al 100% */
+margin-right: -5px;
+margin-bottom: 35px;
+height:78px;
+}
+
+/* RESPONSIVE NAV */
+
+.layout__nav-responsive{
+display: none;
+position: absolute;
+appearance: none;
+width: 1.5rem;
+height: 6px;
+border-radius: 4px;
+background-color: black;
+right: 2rem;
+cursor: pointer;
+margin-right: 20px;
+}
+
+.layout__nav-responsive::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 6px;
+background-color: black;
+border-radius: 4px;
+top: -0.8rem;
+
+}
+.layout__nav-responsive::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 6px;
+background-color: black;
+border-radius: 4px;
+bottom: -0.8rem;
+
+}
+
+/* RESPONSIVE NAV Y CELULARES */
+
+@media (max-width: 760px) {
+
+.caja-logo{
+margin-left: -55px;
+}
+
+.layout__nav-responsive {
+display: flex;
+z-index: 999;
+margin-bottom: 10px;
+margin-right: 55px;
+}
+
+.barnav {
+display: none;
+}
+
+/* RESPONSVIE CARRUSEL */
+
+.carrusel{
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+width: 90%;
+height: 50%;
+margin-top: 20px;
+margin-right: 5px;
+margin-left: 0px;
+}
+
+.imagenes{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: end;
+}
+
+.img{
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+height: 150px;
+width: 250px;
+border-radius: 25px ;
+margin-left: -4px;
+margin-right: 12px;
+object-fit: cover;
+filter: saturate(175%);
+}
+
+.atras{
+margin-left: 18px;
+}
+.texto{
+overflow: hidden;
+position: absolute;
+flex-direction: column;
+transform: translateY(60px);
+margin-bottom: 0px;
+backdrop-filter: blur(20px);
+background-color: rgba(63, 106, 138, 0.21);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 20px;
+border-radius: 50px;
+}
+
+.texto h3{
+text-shadow: 0px 0px 15px black;
+padding-top: 60px;
+color: white;
+font-weight: 300;
+font-size: 25px;
+}
+
+.texto p{
+align-items: center;
+padding: 20px;
+color:white;
+font-size: 0px;
+font-weight: 200;
+text-align: justify;
+}
+
+.imagenes .texto{
+width: 360px;
+height: 70px;
+transition: 1s;
+}
+
+.imagenes:hover .texto{
+transition: height 1s, transform 1s, background-color 1s;
+transform: translateY(260px);
+width: 350px;
+height: 385px;
+background-color: rgba(63, 106, 138, 0.71);
+}
+
+.imagenes:hover .texto p{
+transition: font-size 0s .2s linear;
+font-size: 15px; /* tamaño de p depues de la transcicion */
+font-weight: 300;
+text-shadow: 0px 0px 10px #000000;
+margin-bottom: 50px;
+
+}
+
+.puntos{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.puntos p{
+font-size: 100px;
+font-weight: 100;
+margin-top: -50px;
+color: black;
+}
+
+.puntos .bold{
+font-weight: 700;
+margin-left: 10px;
+margin-right: 10px;
+color: #5E17EB ;
+}
+
+.my-button {
+margin-top: -40px;
+padding: 10px 20px;
+background-color: transparent;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+border: 1px black solid ;
+border-spacing: 2px;
+}
+
+.my-button:hover {
+background-color: #256e99;
+
+}
+
+.my-button:active {
+background-color: #256e99;
+}
+
+/* RESPONSIVE CONTENEDOR FRASE MOIVADORA */
+.contenedor-frase {
+width: 90%;
+height: 150px;
+background-color: #CBEFF3;
+border-radius: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px black solid;
+box-shadow: 1px 7px 20px black;
+margin-left: -4px;
+}
+
+.texto-motivador{
+text-align: center;
+}
+
+.frase-motivadora{
+margin: 10px 5px;
+font-family: fantasy;
+color: black;
+align-items: center;
+font-size: 18px;
+}
+/* SECCION MISION Y VISION */
+
+.contenedor-general {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+
+/* MISION */
+
+.contenedor-mision{
+width: 47.5%;
+height: 585px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-mision{
+display: flex;
+}
+
+.titulo-mision h1{
+text-align: center;
+font-size: 24px;
+color: black;
+margin-bottom: 8px;
+
+}
+
+.contenedor-mision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+}
+
+/* VISION */
+.contenedor-vision {
+width: 47.5%;
+height: 450px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-vision{
+display: flex;
+}
+
+.titulo-vision h1{
+font-size: 24px;
+color: black;
+margin: 10px 20px 0px 20px;
+}
+
+.contenedor-vision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+}
+
+/* CONTENEDORES DE VALORES */
+
+.titulo h1{
+margin-bottom: 30px;
+}
+
+.fila {
+display:contents;
+
+}
+
+.valor{
+margin-left: 18px;
+margin-bottom: 10px;
+}
+
+.fila-2{
+display: contents;
+
+}
+
+.valor-2{
+margin-left: 8px;
+width: 354px;
+margin-bottom: 10px;
+}
+
+.layout__nav-responsive:checked ~ .barnav {
+z-index: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0px;
+position: fixed !important;
+top: 80px;
+left: 0;
+width: 100%;
+height: calc(100% - 80px); /* Ajuste de la altura del menú */
+background-color: #b4cbd9;
+color: var(--light-text-color);
+}
+
+.layout__nav-responsive:checked ~ .barnav .menu {
+flex-grow: 1;
+margin-left: -35px;
+}
+
+/* Estilos adicionales para los enlaces del menú */
+.layout__nav-responsive:checked ~ .barnav .menu a {
+color: var(--background);
+font-size: 2.1rem;
+}
+
+.no-scroll {
+overflow: hidden;
+}
+
+.btn-link.nav-link.dropdown-toggle{
+margin-top: 10px;
+margin-right: 35px;
+
+}
+
+.dropdown-menu.dropdown-menu-end {
+min-width: 70px; /* Elimina el ancho mínimo */
+width: auto; /* Establece el ancho automático basado en el contenido */
+max-width: 100%; /* Establece el ancho máximo al 100% */
+margin-right: -5px;
+margin-bottom: 35px;
+height: 78px;
+}
+.footer {
+height: auto; /* Ajustar la altura automáticamente según el contenido */
+padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+}
+
+.iconos-redes i {
+font-size: 40px; /* Reducir el tamaño de los iconos de redes sociales */
+margin: 15px 10px; /* Ajustar el margen de los iconos */
+}
+
+.footer p {
+font-size: 18px; /* Reducir el tamaño del texto del footer */
+}
+}
+
+/* RESPONSIVE TABLETS */
+
