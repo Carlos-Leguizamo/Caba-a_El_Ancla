@@ -839,5 +839,277 @@ font-size: 18px; /* Reducir el tamaño del texto del footer */
 }
 }
 
-/* RESPONSIVE TABLETS */
+/* RESPONSIVE TABLETS EN GENERAL */
 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+/* BANNER O CARRUSEL DE IMAGENES */
+
+.carrusel{
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-left: 20px;
+}
+
+.imagenes{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: end;
+
+}
+
+.img{
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+height: 300px;
+width: 600px;
+border-radius: 15px ;
+margin: 5px;
+object-fit: cover;
+filter: saturate(175%);
+margin-left: -15px;
+margin-right: -5px;
+}
+
+.texto{
+overflow: hidden;
+position: absolute;
+flex-direction: column;
+transform: translateY(60px);
+margin-bottom: 0px;
+backdrop-filter: blur(20px);
+background-color: rgba(63, 106, 138, 0.21);
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+}
+
+.texto h3{
+text-shadow: 0px 0px 15px black;
+padding-top: 60px;
+color: white;
+font-weight: 300;
+font-size: 25px;
+}
+
+.texto p{
+align-items: center;
+padding: 20px;
+color:white;
+font-size: 0px;
+font-weight: 200;
+text-align: justify;
+}
+
+.imagenes .texto{
+width: 680px;
+height: 70px;
+transition: 1s;
+}
+
+.imagenes:hover .texto{
+transition: height 1s, transform 1s, background-color 1s;
+transform: translateY(30px);
+height: 350px;
+background-color: rgba(63, 106, 138, 0.71);
+}
+
+.imagenes:hover .texto p{
+transition: font-size 0s .2s linear;
+font-size: 20px; /* tamaño de p depues de la transcicion */
+font-weight: 300;
+text-shadow: 0px 0px 10px #000000;
+
+}
+
+.puntos{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.puntos p{
+font-size: 100px;
+font-weight: 500;
+margin-top: -50px;
+color: black;
+}
+
+.puntos .bold{
+font-weight: 700;
+margin-left: 10px;
+margin-right: 10px;
+color: #5E17EB ;
+}
+
+.my-button {
+margin-top: -40px;
+padding: 10px 20px;
+background-color: transparent;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+border: 1px black solid ;
+border-spacing: 2px;
+}
+
+.my-button:hover {
+background-color: #256e99;
+}
+
+.my-button:active {
+background-color: #256e99;
+}
+
+/* RESPONSIVE CONTENEDOR FRASE MOIVADORA */
+.contenedor-frase {
+width: 95%;
+height: 150px;
+background-color: #CBEFF3;
+border-radius: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px black solid;
+box-shadow: 1px 7px 20px black;
+margin-left: -4px;
+}
+
+.texto-motivador{
+text-align: center;
+}
+
+.frase-motivadora{
+margin: 10px 5px;
+font-family: fantasy;
+color: black;
+align-items: center;
+font-size: 22px;
+}
+
+/* SECCION MISION Y VISION */
+
+.contenedor-general {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+
+/* MISION */
+
+.contenedor-mision{
+width: 47.5%;
+height: 275px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-mision{
+display: flex;
+}
+
+.titulo-mision h1{
+text-align: center;
+margin-left: 120px;
+font-size: 24px;
+color: black;
+margin-bottom: 8px;
+
+}
+
+.contenedor-mision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+font-size: 18px;
+}
+
+/* VISION */
+.contenedor-vision {
+width: 47.5%;
+height: 275px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+}
+
+.titulo-vision{
+display: flex;
+}
+
+.titulo-vision h1{
+text-align: center;
+margin-left: 120px;
+font-size: 24px;
+color: black;
+margin-bottom: 8px;
+}
+
+.contenedor-vision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+font-size: 18px;
+}
+
+/* CONTENEDORES DE VALORES */
+
+.titulo h1{
+margin-bottom: 30px;
+}
+
+.fila {
+display:contents;
+
+}
+
+.valor{
+margin-left: 18px;
+margin-bottom: 10px;
+width: 500px;
+font-size: 18px;
+}
+
+.fila-2{
+display: contents;
+
+}
+
+.valor-2{
+margin-left: 15px;
+margin-bottom: 10px;
+width: 500px;
+font-size: 18px;
+}
+.footer {
+height: auto;
+padding: 22px;
+}
+
+.iconos-redes i {
+font-size: 40px;
+margin: 15px 10px;
+}
+
+.footer p {
+font-size: 20px;
+}
+}
+
+/* RESPONSIVE IPAD PRO  */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    
+}
