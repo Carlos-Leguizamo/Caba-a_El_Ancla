@@ -9,8 +9,8 @@ display: none;
 display: none;
 }
 *{
-margin:0; /*Es todo lo fuera de la pagina, la margen de ella*/
-padding: 0; /*Es el borde dentro de la pagina, despues de la margen de la pagina*/
+margin:0;
+padding: 0;
 box-sizing: border-box;
 font-family: sans-serif, monospace;
 }
@@ -106,13 +106,13 @@ transition: border-bottom 0.5s ease-in-out;
 }
 
 .menu:hover a{
-color: black; /*Cambia el color del texto al pasar el cursor por encima*/
-border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
-encima*/
+color: black;
+border-bottom:2px solid black;
+
 }
 
 .dropdown {
-margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+margin-left: -2em;
 }
 
 .modo{
@@ -436,8 +436,8 @@ margin: 25px 15px 20px 0;
 }
 
 .iconos-redes a i:hover {
-color: black; /* Cambiar color al pasar el cursor */
-transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+color: black;
+transform: scale(1.1);
 cursor: pointer;
 
 }
@@ -459,7 +459,7 @@ right:10px;
 z-index:2;
 }
 
-/* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
+/* ---------------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
 
 .btn-link.nav-link.dropdown-toggle{
 margin-top: 0px;
@@ -468,9 +468,9 @@ margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+width: auto;
+max-width: 100%;
 margin-right: -5px;
 margin-bottom: 35px;
 height:78px;
@@ -687,70 +687,51 @@ color: black;
 align-items: center;
 font-size: 18px;
 }
-/* SECCION MISION Y VISION */
 
+/* SECCION DE MISION Y VISION */
 .contenedor-general {
 width: 100%;
-height: auto;
+margin: 0 auto;
 display: flex;
-justify-content: space-between;
+justify-content: center;
+flex-wrap: wrap;
 }
-
-/* MISION */
 
 .contenedor-mision{
-width: 47.5%;
-height: 585px;
-background-color: #CBEFF3;
-border: 1px black solid;
-border-radius: 40px;
-margin: 20px;
-box-shadow: 1px 7px 20px black;
+width: 100%;
+margin-top: 40px;
+}
+.contenedor-vision {
+width: 100%;
+margin-bottom: 20px;
 }
 
-.titulo-mision{
-display: flex;
-}
-
-.titulo-mision h1{
+.titulo-mision h1,
+.titulo-vision h1 {
+margin: 0 auto; /* Centrar horizontalmente */
+margin-top: 10px;
 text-align: center;
 font-size: 24px;
 color: black;
-margin-bottom: 8px;
-
 }
 
-.contenedor-mision p{
+.contenedor-mision p,
+.contenedor-vision p {
 text-align: justify;
 margin: 5px 20px;
 color: black;
+font-size: 18px;
 }
 
-/* VISION */
+/* Estilos compartidos para los contenedores */
+
+.contenedor-mision,
 .contenedor-vision {
-width: 47.5%;
-height: 450px;
+height: auto;
 background-color: #CBEFF3;
 border: 1px black solid;
 border-radius: 40px;
-margin: 20px;
 box-shadow: 1px 7px 20px black;
-}
-
-.titulo-vision{
-display: flex;
-}
-
-.titulo-vision h1{
-font-size: 24px;
-color: black;
-margin: 10px 20px 0px 20px;
-}
-
-.contenedor-vision p{
-text-align: justify;
-margin: 5px 20px;
-color: black;
 }
 
 /* CONTENEDORES DE VALORES */
@@ -801,6 +782,7 @@ margin-left: -35px;
 }
 
 /* Estilos adicionales para los enlaces del menú */
+
 .layout__nav-responsive:checked ~ .barnav .menu a {
 color: var(--background);
 font-size: 2.1rem;
@@ -817,21 +799,21 @@ margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px;
+width: auto;
+max-width: 100%;
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
 }
 .footer {
-height: auto; /* Ajustar la altura automáticamente según el contenido */
-padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+height: auto;
+padding: 20px;
 }
 
 .iconos-redes i {
 font-size: 40px; /* Reducir el tamaño de los iconos de redes sociales */
-margin: 15px 10px; /* Ajustar el margen de los iconos */
+margin: 15px 10px;
 }
 
 .footer p {
@@ -1012,18 +994,20 @@ border: 1px black solid;
 border-radius: 40px;
 margin: 20px;
 box-shadow: 1px 7px 20px black;
-}
-
-.titulo-mision{
-display: flex;
+display: flex; /* Añadido */
+flex-direction: column; /* Añadido */
+justify-content: center; /* Añadido */
+align-items: center; /* Añadido */
 }
 
 .titulo-mision h1{
+
 text-align: center;
-margin-left: 120px;
+margin-top: 0px;
+justify-content: center;
+display: flex;
 font-size: 24px;
 color: black;
-margin-bottom: 8px;
 
 }
 
@@ -1043,27 +1027,27 @@ border: 1px black solid;
 border-radius: 40px;
 margin: 20px;
 box-shadow: 1px 7px 20px black;
-}
-
-.titulo-vision{
 display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .titulo-vision h1{
 text-align: center;
-margin-left: 120px;
+margin-top: -40px;
+justify-content: center;
+display: flex;
 font-size: 24px;
 color: black;
-margin-bottom: 8px;
 }
 
 .contenedor-vision p{
 text-align: justify;
-margin: 5px 20px;
+margin: 0px 20px;
 color: black;
 font-size: 18px;
 }
-
 /* CONTENEDORES DE VALORES */
 
 .titulo h1{
@@ -1105,5 +1089,84 @@ margin: 15px 10px;
 
 .footer p {
 font-size: 20px;
+}
+}
+
+/* IPAD PRO TAMAÑO 1024x1366 */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+/* SECCION MISION Y VISION */
+
+.contenedor-general {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: space-between;
+}
+
+/* MISION */
+
+.contenedor-mision{
+width: 47.5%;
+height: 275px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.titulo-mision h1{
+
+text-align: center;
+margin-top: -45px;
+justify-content: center;
+display: flex;
+font-size: 24px;
+color: black;
+
+}
+
+.contenedor-mision p{
+text-align: justify;
+margin: 5px 20px;
+color: black;
+font-size: 18px;
+}
+
+/* VISION */
+.contenedor-vision {
+width: 47.5%;
+height: 275px;
+background-color: #CBEFF3;
+border: 1px black solid;
+border-radius: 40px;
+margin: 20px;
+box-shadow: 1px 7px 20px black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.titulo-vision h1{
+text-align: center;
+margin-top: -60px;
+justify-content: center;
+display: flex;
+font-size: 24px;
+color: black;
+}
+
+.contenedor-vision p{
+text-align: justify;
+margin: 0px 20px;
+color: black;
+font-size: 18px;
 }
 }

@@ -9,8 +9,8 @@ display: none;
 display: none;
 }
 *{
-margin:0; /*Es todo lo fuera de la pagina, la margen de ella*/
-padding: 0; /*Es el borde dentro de la pagina, despues de la margen de la pagina*/
+margin:0; 
+padding: 0; 
 box-sizing: border-box;
 font-family: sans-serif, monospace;
 }
@@ -71,8 +71,8 @@ height: 3em;
 margin: 3em;
 display: flex;
 flex-direction: column;
-justify-content: center; /* Alinea verticalmente los elementos del nav */
-align-items: center; /* Alinea horizontalmente los elementos del nav */
+justify-content: center;
+align-items: center; 
 margin-top: 1em;
 }
 
@@ -111,7 +111,7 @@ encima*/
 }
 
 .dropdown {
-margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+margin-left: -2em; 
 }
 
 .modo{
@@ -152,19 +152,20 @@ color: black;
 text-align: justify;
 margin: 10px 20px 10px 20px;
 }
+
 /* MAPA LOCALIZACION */
 
 .contenedor-general {
 margin: 30px auto;
-width:auto; /* Adjust width if needed */
+width:auto; 
 border: 2px solid black;
 }
 
 /* BOTON LLAMADO A LA ACCION DE IR A LA LOCALIZACION */
 
 .contenedor-boton {
-display: inline-block; /* Ensures proper button placement and responsiveness */
-margin: 10px; /* Optional spacing around the button */
+display: inline-block; 
+margin: 10px; 
 }
 
 .button-gps {
@@ -214,10 +215,8 @@ margin: 25px 15px 20px 0;
 }
 
 .iconos-redes a i:hover {
-color: black;
-/* Cambiar color al pasar el cursor */
-transform: scale(1.1);
-/* Aumentar tamaño al pasar el cursor */
+color: black; /* Cambiar color al pasar el curso*/
+transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
 cursor: pointer;
 
 }
@@ -248,9 +247,9 @@ margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px; 
+width: auto; 
+max-width: 100%; 
 margin-right: -5px;
 margin-bottom: 35px;
 height:78px;
@@ -320,8 +319,8 @@ font-size: 15px;
 }
 
 iframe {
-width: 100%; /* Ajusta el ancho del iframe al 80% del contenedor */
-height: 320px; /* Establece una altura fija para el iframe */
+width: 100%; 
+height: 320px; 
 }
 
 .layout__nav-responsive:checked ~ .barnav {
@@ -334,7 +333,7 @@ position: fixed !important;
 top: 80px;
 left: 0;
 width: 100%;
-height: calc(100% - 80px); /* Ajuste de la altura del menú */
+height: calc(100% - 80px); 
 background-color: #b4cbd9;
 color: var(--light-text-color);
 }
@@ -361,33 +360,33 @@ margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px; 
+width: auto; 
+max-width: 100%; 
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
 }
 
 .footer {
-height: auto; /* Ajustar la altura automáticamente según el contenido */
-padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+height: auto; 
+padding: 20px; 
 }
 
 .iconos-redes i {
-font-size: 40px; /* Reducir el tamaño de los iconos de redes sociales */
-margin: 15px 10px; /* Ajustar el margen de los iconos */
+font-size: 40px; 
+margin: 15px 10px; 
 }
 
 .footer p {
-font-size: 18px; /* Reducir el tamaño del texto del footer */
+font-size: 18px; 
 }
 }
 
 /* RESPONSIVE IPAD PRO */
 
 @media (min-width: 1024px) and (max-width: 1366px){
-/* Boton del Dark Mode */
+
 .btn-link.nav-link.dropdown-toggle{
 margin-top: 0px;
 margin-right: 35px;
@@ -395,9 +394,9 @@ margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px; 
+width: auto; 
+max-width: 100%; 
 margin-right: -5px;
 margin-bottom: 35px;
 height:76px;
@@ -405,11 +404,9 @@ height:76px;
 iframe {
 width: 950px;
 height: 750px;
-
 }
 
 .contenedor-general{
 margin-bottom: 74px;
 }
-
 }

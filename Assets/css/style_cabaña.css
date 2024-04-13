@@ -20,10 +20,8 @@ font-family: sans-serif;
 :root {
 --background: linear-gradient(90deg, white 25%, #256e99 75%);
 --text-color: #000;
---light-text-color: #000;
-/* Color del texto en modo claro */
---dark-text-color: #fff;
-/* Color del texto en modo oscuro */
+--light-text-color: #000; /* Color del texto en modo claro */
+--dark-text-color: #fff; /* Color del texto en modo oscuro */
 --light-background: var(--background);
 --dark-background: #212529;
 /* Transiciones */
@@ -74,11 +72,8 @@ margin: 3em;
 
 .dropdown-menu.dropdown-menu-end {
 min-width: 70px;
-/* Elimina el ancho mínimo */
 width: auto;
-/* Establece el ancho automático basado en el contenido */
 max-width: 100%;
-/* Establece el ancho máximo al 100% */
 margin-bottom: 35px;
 height: 78px;
 }
@@ -90,9 +85,7 @@ margin: 3em;
 display: flex;
 flex-direction: column;
 justify-content: center;
-/* Alinea verticalmente los elementos del nav */
 align-items: center;
-/* Alinea horizontalmente los elementos del nav */
 margin-top: 1em;
 }
 
@@ -125,14 +118,12 @@ transition: border-bottom 0.5s ease-in-out;
 
 .menu:hover a {
 color: black;
-border-bottom: 2px solid black;
-/*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
+border-bottom: 2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
 encima*/
 }
 
 .dropdown {
 margin-left: -2em;
-/* Ajusta el margen izquierdo del botón dropdown */
 }
 
 .modo {
@@ -190,9 +181,7 @@ text-align: center;
 div>img {
 border-radius: 8px;
 width: 400px;
-/* Ancho fijo para todas las imágenes */
 height: 400px;
-/*Alto fijo para todas las imágenes */
 box-shadow: 0px 0px 20px #000;
 transition: 0.3s;
 max-width: 400px;
@@ -219,11 +208,9 @@ justify-content: flex-start;
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-/* Dos columnas */
+grid-template-columns: repeat(3, 1fr); /* Dos columnas */
 gap: 20px;
 justify-content: start;
-/* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 55px;
 }
@@ -258,10 +245,8 @@ margin: 25px 15px 20px 0;
 }
 
 .iconos-redes a i:hover {
-color: black;
-/* Cambiar color al pasar el cursor */
-transform: scale(1.1);
-/* Aumentar tamaño al pasar el cursor */
+color: black; /* Cambiar color al pasar el cursor */
+transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
 cursor: pointer;
 
 }
@@ -288,13 +273,9 @@ z-index: 2;
 /* RESPONSIVE */
 
 @media only screen and (max-width: 800px) {
-
-/* Estilos para móviles pequeños */
 .contenedor-texto {
 margin: 30px;
-/* Centra el contenedor de texto horizontalmente */
 width: 80%;
-/* Ancho del contenedor de texto */
 text-align: justify;
 }
 
@@ -324,55 +305,42 @@ margin-left: 190px;
 
 div>img {
 width: 100%;
-/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
 height: auto;
-/* Se ajustará automáticamente manteniendo la proporción */
 max-width: 100%;
-/* Asegura que la imagen no se desborde del contenedor */
 margin: 0 auto;
-/* Centra la imagen horizontalmente */
+
 }
 
 .imagenes {
 display: flex;
-/* Cambia el contenedor de imágenes a un flexbox */
 flex-direction: column;
-/* Coloca las imágenes en una columna */
 align-items: center;
-/* Centra las imágenes horizontalmente */
 margin: 5px;
-/* Elimina el margen izquierdo y derecho */
+
 }
 
 .imagenes img {
 width: 100%;
-/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
 height: 200px;
-/* Mantiene la relación de aspecto de la imagen */
 margin-left: 40px;
 }
 
 .footer {
 height: auto;
-/* Ajustar la altura automáticamente según el contenido */
 padding: 20px;
-/* Agregar un poco de espacio alrededor del contenido */
 }
 
 .iconos-redes i {
 font-size: 30px;
-/* Reducir el tamaño de los iconos de redes sociales */
 margin: 15px 10px;
-/* Ajustar el margen de los iconos */
 }
 
 .footer p {
-font-size: 14px;
-/* Reducir el tamaño del texto del footer */
+font-size: 14px; /* Reducir el tamaño del texto del footer */
 }
 }
 
-/* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
+/* -------------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
 
 .btn-link.nav-link.dropdown-toggle {
 margin-top: 0px;
@@ -382,11 +350,8 @@ margin-right: 35px;
 
 .dropdown-menu.dropdown-menu-end {
 min-width: 70px;
-/* Elimina el ancho mínimo */
 width: auto;
-/* Establece el ancho automático basado en el contenido */
 max-width: 100%;
-/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
@@ -458,11 +423,9 @@ position: fixed !important;
 top: 80px;
 left: 0;
 width: 100%;
-height: calc(100% - 80px);
-/* Ajuste de la altura del menú */
+height: calc(100% - 80px); /* Ajuste de la altura del menú */
 background-color: #b4cbd9;
-color: var(--light-text-color);
-/*Variable para mantener el texto del nav desplegable en negro*/
+color: var(--light-text-color); /*Variable para mantener el texto del nav desplegable en negro*/
 }
 
 .layout__nav-responsive:checked~.barnav .menu {
@@ -488,11 +451,8 @@ margin-right: 35px;
 
 .dropdown-menu.dropdown-menu-end {
 min-width: 70px;
-/* Elimina el ancho mínimo */
 width: auto;
-/* Establece el ancho automático basado en el contenido */
 max-width: 100%;
-/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
@@ -505,9 +465,7 @@ height: 78px;
 
 .contenedor-texto {
 margin: 30px;
-/* Centra el contenedor de texto horizontalmente */
 width: 80%;
-/* Ancho del contenedor de texto */
 text-align: justify;
 }
 
@@ -539,51 +497,36 @@ font-size: 40px;
 
 div>img {
 width: 100%;
-/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
 height: auto;
-/* Se ajustará automáticamente manteniendo la proporción */
 max-width: 100%;
-/* Asegura que la imagen no se desborde del contenedor */
 margin: 0 auto;
-/* Centra la imagen horizontalmente */
 }
 
 .imagenes {
 display: flex;
-/* Cambia el contenedor de imágenes a un flexbox */
 flex-direction: column;
-/* Coloca las imágenes en una columna */
 align-items: center;
-/* Centra las imágenes horizontalmente */
 margin: 5px;
-/* Elimina el margen izquierdo y derecho */
 }
 
 .imagenes img {
 width: 100%;
-/* Ajusta el tamaño de la imagen al 100% del ancho del contenedor */
 height: 350px;
-/* Mantiene la relación de aspecto de la imagen */
 margin-left: 80px;
 }
 
 .footer {
 height: auto;
-/* Ajustar la altura automáticamente según el contenido */
 padding: 20px;
-/* Agregar un poco de espacio alrededor del contenido */
 }
 
 .iconos-redes i {
 font-size: 40px;
-/* Reducir el tamaño de los iconos de redes sociales */
 margin: 15px 10px;
-/* Ajustar el margen de los iconos */
 }
 
 .footer p {
 font-size: 20px;
-/* Reducir el tamaño del texto del footer */
 }
 }
 
@@ -600,11 +543,8 @@ margin-right: 35px;
 
 .dropdown-menu.dropdown-menu-end {
 min-width: 70px;
-/* Elimina el ancho mínimo */
 width: auto;
-/* Establece el ancho automático basado en el contenido */
 max-width: 100%;
-/* Establece el ancho máximo al 100% */
 margin-right: -5px;
 margin-bottom: 35px;
 height: 76px;
@@ -612,31 +552,24 @@ height: 76px;
 
 .titulo {
 text-align: center;
-/* Ajustar el margen izquierdo para centrar el título */
-
 }
 
 .contenedor-parrafo {
 margin-left: 80px
-/* Ajustar los márgenes para los párrafos */
-
 }
 
 .Subtitulo {
 text-align: center;
 font-size: 50px;
-/* Reducir el tamaño del subtítulo */
 }
 
 .imagenes {
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-/* Dos columnas */
+grid-template-columns: repeat(3, 1fr); /* Dos columnas */
 gap: 60px;
-justify-content: start;
-/* Alinea el contenido a la izquierda */
+justify-content: start; /* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 30px;
 }
@@ -661,11 +594,9 @@ justify-content: center;
 width: 80%;
 margin-top: 2%;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-/* Dos columnas */
+grid-template-columns: repeat(3, 1fr); /* Dos columnas */
 gap: 20px;
-justify-content: start;
-/* Alinea el contenido a la izquierda */
+justify-content: start; /* Alinea el contenido a la izquierda */
 align-items: start;
 margin-left: 0px;
 }

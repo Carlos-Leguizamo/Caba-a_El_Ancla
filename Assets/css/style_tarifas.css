@@ -8,12 +8,14 @@ display: none;
 :-moz-scrollbar {
 display: none;
 }
+
 *{
-margin:0; /*Es todo lo fuera de la pagina, la margen de ella*/
-padding: 0; /*Es el borde dentro de la pagina, despues de la margen de la pagina*/
+margin:0; 
+padding: 0; 
 box-sizing: border-box;
 font-family: sans-serif, monospace;
 }
+
 :root {
 --background: linear-gradient(90deg, white 25%, #256e99 75%);
 --text-color: #000;
@@ -21,8 +23,7 @@ font-family: sans-serif, monospace;
 --dark-text-color: #fff; /* Color del texto en modo oscuro */
 --light-background: var(--background);
 --dark-background: #212529;
-/* Transiciones */
---transition: all 0.2s ease-in-out;
+--transition: all 0.2s ease-in-out; /* Transiciones */
 }
 
 #sun-fill {
@@ -72,8 +73,8 @@ height: 3em;
 margin: 3em;
 display: flex;
 flex-direction: column;
-justify-content: center; /* Alinea verticalmente los elementos del nav */
-align-items: center; /* Alinea horizontalmente los elementos del nav */
+justify-content: center; 
+align-items: center; 
 margin-top: 1em;
 }
 
@@ -84,7 +85,6 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-
 }
 
 .menu{
@@ -94,7 +94,6 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center
-
 }
 
 .menu a{
@@ -102,7 +101,6 @@ text-decoration: none;
 color: black;
 border-bottom: none;
 transition: border-bottom 0.5s ease-in-out;
-
 }
 
 .menu:hover a{
@@ -112,7 +110,7 @@ encima*/
 }
 
 .dropdown {
-margin-left: -2em; /* Ajusta el margen izquierdo del botón dropdown */
+margin-left: -2em; 
 }
 
 .modo{
@@ -120,6 +118,7 @@ text-align: center;
 }
 
 /* ESTILOS DE LAS TABLAS CATEGORIAS */
+
 /* TEMPORADA ALTA ESPECIAL */
 .contenido {
 display: flex;
@@ -135,16 +134,15 @@ border-color: black;
 
 .th-temporadas-alta {
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
 }
 
 .texto {
-margin-left:5px; /* Espacio entre la tabla y el párrafo */
+margin-left: 5px; 
 font-size: 14px;
-text-align: justify; /* Justifica el texto */
-
+text-align: justify; 
 }
 
 .texto-media{
@@ -156,7 +154,7 @@ text-align: justify;
 .general-temporadas {
 width: 80%;
 height: auto;
-margin: 10PX auto; /* Centra el contenido horizontalmente */
+margin: 10PX auto; 
 padding: 20px;
 border: 1px solid #ccc;
 border-radius: 10px;
@@ -164,8 +162,8 @@ color: var(--text-color);
 background-color: var(--light-background);
 transition: var(--transition);
 }
-/* ESTILOS DEL TITULO */
 
+/* ESTILOS DEL TITULO */
 .titulo-temporadas {
 text-align: center;
 margin-bottom: 20px;
@@ -182,7 +180,6 @@ margin-top: 0;
 }
 
 /* TEMPORADA ALTA ESPECIAL */
-
 .informacion-temporadas{
 margin: 0 auto;
 }
@@ -196,10 +193,9 @@ border-color: black;
 
 .th-temporadas{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: yellow;
 color: black;
-
 }
 
 /* TEMPORADA ALTA */
@@ -217,10 +213,9 @@ border-color: black;
 
 .th-temporadas-alta{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
-
 }
 
 /* TEMPORADA MEDIA */
@@ -237,10 +232,9 @@ border-color: black;
 
 .th-temporadas-media{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(255, 200, 209);
 color: black;
-
 }
 
 /* TEMPORADA BAJA */
@@ -257,10 +251,9 @@ border-color: black;
 
 .th-temporadas-baja{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(198, 101, 198);
 color: black;
-
 }
 
 /* ESTILOS DE LAS TABLAS TARIFAS */
@@ -289,24 +282,22 @@ margin-bottom: 5px;
 .informacion-alta,
 .informacion-media,
 .informacion-baja {
-width: 20%; /* Ancho de cada tabla */
+width: 20%; 
 display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top; /* Alinear en la parte superior */
-text-align:center; /* Alinear el contenido de las tablas al centro */
+vertical-align: top;
+text-align:center; 
 margin-left: 48px;
-
 }
 
 .titulo-categoria-alta-especial,
 .titulo-categoria-alta,
 .titulo-categoria-media,
 .titulo-categoria-baja {
-text-align: center; /* Alinear el texto de los títulos al centro */
+text-align: center; 
 }
 
 /* Alinear texto al centro */
-th, td
-{
+th, td{
 padding: 10px;
 text-align: center;
 }
@@ -316,8 +307,8 @@ padding: 10px;
 text-align: center;
 color: #000;
 }
-/* Establecer color de fondo y texto para las celdas de encabezado */
-th {
+
+th { 
 background-color: #333;
 color: #fff;
 }
@@ -337,11 +328,9 @@ transition: transform 0 ease; /* Restaurar la transición */
 }
 
 /* Estilos para la sección de admisión de mascotas */
-
 .admission-section {
 background-color: transparent;
 padding: 50px 0;
-
 }
 
 .admission-section h1 {
@@ -370,7 +359,6 @@ margin-bottom: 0;
 }
 
 /* FOOTER */
-
 .footer {
 width: 100%;
 height: auto;
@@ -394,12 +382,9 @@ margin: 25px 15px 20px 0;
 }
 
 .iconos-redes a i:hover {
-color: black;
-/* Cambiar color al pasar el cursor */
-transform: scale(1.1);
-/* Aumentar tamaño al pasar el cursor */
+color: black;/* Cambiar color al pasar el cursor */
+transform: scale(1.1);/* Aumentar tamaño al pasar el cursor */
 cursor: pointer;
-
 }
 
 .footer p {
@@ -408,7 +393,6 @@ color: black;
 }
 
 /* BOTON SUBIR PAGINA */
-
 .ir-arriba {
 font-size: 20px;
 color: black;
@@ -424,13 +408,12 @@ z-index: 2;
 .btn-link.nav-link.dropdown-toggle{
 margin-top: 0px;
 margin-right: 35px;
-
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px; 
+width: auto; 
+max-width: 100%; 
 margin-right: -5px;
 margin-bottom: 35px;
 height:78px;
@@ -459,8 +442,8 @@ height: 6px;
 background-color: black;
 border-radius: 4px;
 top: -0.8rem;
-
 }
+
 .layout__nav-responsive::before{
 content: "";
 position: absolute;
@@ -469,7 +452,6 @@ height: 6px;
 background-color: black;
 border-radius: 4px;
 bottom: -0.8rem;
-
 }
 
 /* RESPONSIVE NAV Y CELULARES */
@@ -524,13 +506,12 @@ overflow: hidden;
 .btn-link.nav-link.dropdown-toggle{
 margin-top: 10px;
 margin-right: 35px;
-
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; /* Elimina el ancho mínimo */
-width: auto; /* Establece el ancho automático basado en el contenido */
-max-width: 100%; /* Establece el ancho máximo al 100% */
+min-width: 70px; 
+width: auto; 
+max-width: 100%; 
 margin-right: -5px;
 margin-bottom: 35px;
 height: 78px;
@@ -552,10 +533,9 @@ border-color: black;
 
 .th-temporadas-alta{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
-
 }
 
 /* Responsive tabla temporada media M */
@@ -572,10 +552,9 @@ border-color: black;
 
 .th-temporadas-media{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(255, 200, 209);
 color: black;
-
 }
 
 /* Responsive tabla temporada baja B */
@@ -593,11 +572,11 @@ border-color: black;
 
 .th-temporadas-baja{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(198, 101, 198);
 color: black;
-
 }
+
 /* ESTILOS DE LAS TABLAS */
 .informacion-alta-especial,
 .informacion-alta,
@@ -617,16 +596,15 @@ margin-left: 48px;
 margin-left: 60px;
 margin-bottom: 20px;
 }
+
 .titulo-categoria-alta-especial,
 .titulo-categoria-alta,
 .titulo-categoria-media,
 .titulo-categoria-baja {
-text-align: center; /* Alinear el texto de los títulos al centro */
+text-align: center; 
 }
 
-/* Alinear texto al centro */
-th, td
-{
+th, td{
 padding: 10px;
 text-align: center;
 }
@@ -636,7 +614,7 @@ padding: 10px;
 text-align: center;
 color: #000;
 }
-/* Establecer color de fondo y texto para las celdas de encabezado */
+
 th {
 background-color: #333;
 color: #fff;
@@ -661,17 +639,17 @@ margin: 0px 15px;
 }
 
 .footer {
-height: auto; /* Ajustar la altura automáticamente según el contenido */
-padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+height: auto; 
+padding: 20px; 
 }
 
 .iconos-redes i {
-font-size: 40px; /* Reducir el tamaño de los iconos de redes sociales */
-margin: 15px 10px; /* Ajustar el margen de los iconos */
+font-size: 40px; 
+margin: 15px 10px; 
 }
 
 .footer p {
-font-size: 18px; /* Reducir el tamaño del texto del footer */
+font-size: 18px; 
 }
 }
 
@@ -695,7 +673,7 @@ border-color: black;
 
 .th-temporadas-alta{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
 
@@ -715,14 +693,12 @@ border-color: black;
 
 .th-temporadas-media{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(255, 200, 209);
 color: black;
-
 }
 
 /* Responsive tabla temporada baja B */
-
 .informacion-temporadas-baja{
 margin: 10px auto;
 }
@@ -736,10 +712,9 @@ border-color: black;
 
 .th-temporadas-baja{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(198, 101, 198);
 color: black;
-
 }
 
 /* RESPONVIE TABLAS TARIFAS */
@@ -748,20 +723,22 @@ color: black;
 .informacion-alta-especial,
 .informacion-alta,
 .informacion-media{
-width: 20%; /* Ancho de cada tabla */
-display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top; /* Alinear en la parte superior */
-text-align:center; /* Alinear el contenido de las tablas al centro */
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
 margin-left: 48px;
 }
+
 .informacion-baja {
-width: 20%; /* Ancho de cada tabla */
-display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top; /* Alinear en la parte superior */
-text-align:center; /* Alinear el contenido de las tablas al centro */
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
 margin-top: 10px;
 margin-left: 215px;
 }
+
 .titulo-categoria-alta-especial,
 .titulo-categoria-alta,
 .titulo-categoria-media,
@@ -769,7 +746,6 @@ margin-left: 215px;
 text-align: center;
 height: 65px;
 }
-
 }
 
 /* RESPONSIVE IPAD PRO */
@@ -779,7 +755,6 @@ height: 65px;
 /* RESPONSIVE TIPOS DE TARIFAS */
 
 /* Responsive tabla remporada Alta Especial AE */
-
 .informacion-temporadas{
 margin: 0 auto;
 }
@@ -793,10 +768,9 @@ border-color: black;
 
 .th-temporadas{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center;
 background-color: yellow;
 color: black;
-
 }
 
 /* Responsive tabla temporada alta A */
@@ -813,10 +787,9 @@ border-color: black;
 
 .th-temporadas-alta{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
-
 }
 
 /* Responsive tabla temporada media M */
@@ -833,10 +806,9 @@ border-color: black;
 
 .th-temporadas-media{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(255, 200, 209);
 color: black;
-
 }
 
 /* Responsive tabla temporada baja B */
@@ -854,32 +826,34 @@ border-color: black;
 
 .th-temporadas-baja{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(198, 101, 198);
 color: black;
 
 }
 
-/* RESPONVIE TABLAS TARIFAS */
+/* RESPONSIVE TABLAS TARIFAS */
 
 /* ESTILOS DE LAS TABLAS */
 .informacion-alta-especial,
 .informacion-alta,
 .informacion-media{
-width: 20%; /* Ancho de cada tabla */
-display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top; /* Alinear en la parte superior */
-text-align:center; /* Alinear el contenido de las tablas al centro */
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
 margin-left: 75px;
 }
+
 .informacion-baja {
-width: 20%; /* Ancho de cada tabla */
-display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top; /* Alinear en la parte superior */
-text-align:center; /* Alinear el contenido de las tablas al centro */
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
 margin-top: 10px;
 margin-left: 310px;
 }
+
 .titulo-categoria-alta-especial,
 .titulo-categoria-alta,
 .titulo-categoria-media,
@@ -887,7 +861,6 @@ margin-left: 310px;
 text-align: center;
 height: 65px;
 }
-
 }
 
 /* RESPONSIVE PARA PORTATILES EN GENERAL */
@@ -896,7 +869,6 @@ height: 65px;
 /* RESPONSIVE TIPOS DE TARIFAS */
 
 /* Responsive tabla remporada Alta Especial AE */
-
 .informacion-temporadas{
 margin: 0 auto;
 }
@@ -910,10 +882,9 @@ border-color: black;
 
 .th-temporadas{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: yellow;
 color: black;
-
 }
 
 /* Responsive tabla temporada alta A */
@@ -930,10 +901,9 @@ border-color: black;
 
 .th-temporadas-alta{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color: rgb(114, 184, 114);
 color: black;
-
 }
 
 /* Responsive tabla temporada media M */
@@ -950,14 +920,12 @@ border-color: black;
 
 .th-temporadas-media{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(255, 200, 209);
 color: black;
-
 }
 
 /* Responsive tabla temporada baja B */
-
 .informacion-temporadas-baja{
 margin: 10px auto;
 }
@@ -971,10 +939,38 @@ border-color: black;
 
 .th-temporadas-baja{
 padding: 10px;
-text-align: center; /* Centra el contenido de las celdas */
+text-align: center; 
 background-color:rgb(198, 101, 198);
 color: black;
-
 }
 
+/* RESPONVIE TABLAS TARIFAS */
+
+/* ESTILOS DE LAS TABLAS */
+.informacion-alta-especial,
+.informacion-alta,
+.informacion-media{
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
+margin-left: 120px;
+}
+
+.informacion-baja {
+width: 20%; 
+display: inline-block; 
+vertical-align: top; 
+text-align:center; 
+margin-top: 10px;
+margin-left: 455px;
+}
+
+.titulo-categoria-alta-especial,
+.titulo-categoria-alta,
+.titulo-categoria-media,
+.titulo-categoria-baja {
+text-align: center;
+height: 65px;
+}
 }
