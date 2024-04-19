@@ -2,279 +2,354 @@
 
 /* Ocultar Scroll */
 ::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 :-moz-scrollbar {
-display: none;
+  display: none;
 }
 
-*{
-margin:0; 
-padding: 0; 
-box-sizing: border-box;
-font-family: sans-serif, monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, monospace;
 }
 
 :root {
---background: linear-gradient(90deg, white 25%, #256e99 75%);
---text-color: #000;
---light-text-color: #000; /* Color del texto en modo claro */
---dark-text-color: #fff; /* Color del texto en modo oscuro */
---light-background: var(--background);
---dark-background: #212529;
---transition: all 0.2s ease-in-out; /* Transiciones */
+  --background: linear-gradient(90deg, white 25%, #256e99 75%);
+  --text-color: #000;
+  --light-text-color: #000;
+  /* Color del texto en modo claro */
+  --dark-text-color: #fff;
+  /* Color del texto en modo oscuro */
+  --light-background: var(--background);
+  --dark-background: #212529;
+  --transition: all 0.2s ease-in-out;
+  /* Transiciones */
 }
 
 #sun-fill {
-fill: #fdc21c;
+  fill: #fdc21c;
 }
 
-body{
-width: 100%;
-height: 100%;
-margin: 0;
-padding: 0;
-font-family: Arial, Helvetica, sans-serif;
-color: var(--text-color);
-background-color: var(--light-background);
-transition: var(--transition);
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-background);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* LOADER */
+
+.centrado {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.lds-ring {
+  color: #fff;
+}
+
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .header {
-width: 100%;
-height: 5em;
-background: var(--background);
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-align-items: center;
+  width: 100%;
+  height: 5em;
+  background: var(--background);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.caja-logo{
-width: 50%;
-height: 2em;
-display: flex;
-justify-content: flex-start;
-align-items:center ;
+.caja-logo {
+  width: 50%;
+  height: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.logo-principal{
-margin:3em;
+.logo-principal {
+  margin: 3em;
 }
 
-.nav{
-width: 100%;
-height: 3em;
-margin: 3em;
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center; 
-margin-top: 1em;
+.nav {
+  width: 100%;
+  height: 3em;
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
 }
 
-.barnav{
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+.barnav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu{
-width: 15%;
-height: 100%;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center
+.menu {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
 }
 
-.menu a{
-text-decoration: none;
-color: black;
-border-bottom: none;
-transition: border-bottom 0.5s ease-in-out;
+.menu a {
+  text-decoration: none;
+  color: black;
+  border-bottom: none;
+  transition: border-bottom 0.5s ease-in-out;
 }
 
-.menu:hover a{
-color: black; /*Cambia el color del texto al pasar el cursor por encima*/
-border-bottom:2px solid black; /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
+.menu:hover a {
+  color: black;
+  /*Cambia el color del texto al pasar el cursor por encima*/
+  border-bottom: 2px solid black;
+  /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
 encima*/
 }
 
 .dropdown {
-margin-left: -2em; 
+  margin-left: -2em;
 }
 
-.modo{
-text-align: center;
+.modo {
+  text-align: center;
 }
 
 /* ESTILOS DE LAS TABLAS CATEGORIAS */
 
 /* TEMPORADA ALTA ESPECIAL */
 .contenido {
-display: flex;
-align-items: center; /* Alinea los elementos verticalmente */
+  display: flex;
+  align-items: center;
+  /* Alinea los elementos verticalmente */
 }
 
 .tabla-temporadas-alta {
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  border-color: black;
 }
 
 .th-temporadas-alta {
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(114, 184, 114);
+  color: black;
 }
 
 .texto {
-margin-left: 5px; 
-font-size: 14px;
-text-align: justify; 
+  margin-left: 5px;
+  font-size: 14px;
+  text-align: justify;
 }
 
-.texto-media{
-margin-left: 5px;
-font-size: 14px;
-text-align: justify;
+.texto-media {
+  margin-left: 5px;
+  font-size: 14px;
+  text-align: justify;
 }
 
 .general-temporadas {
-width: 80%;
-height: auto;
-margin: 10PX auto; 
-padding: 20px;
-border: 1px solid #ccc;
-border-radius: 10px;
-color: var(--text-color);
-background-color: var(--light-background);
-transition: var(--transition);
+  width: 80%;
+  height: auto;
+  margin: 10PX auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: var(--text-color);
+  background-color: var(--light-background);
+  transition: var(--transition);
 }
 
 /* ESTILOS DEL TITULO */
 .titulo-temporadas {
-text-align: center;
-margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .titulo-temporadas h1 {
-font-size: 24px;
-margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .titulo-temporadas h2 {
-font-size: 18px;
-margin-top: 0;
+  font-size: 18px;
+  margin-top: 0;
 }
 
 /* TEMPORADA ALTA ESPECIAL */
-.informacion-temporadas{
-margin: 0 auto;
+.informacion-temporadas {
+  margin: 0 auto;
 }
 
-.tabla-temporadas{
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
+.tabla-temporadas {
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  border-color: black;
 }
 
-.th-temporadas{
-padding: 10px;
-text-align: center; 
-background-color: yellow;
-color: black;
+.th-temporadas {
+  padding: 10px;
+  text-align: center;
+  background-color: yellow;
+  color: black;
 }
 
 /* TEMPORADA ALTA */
 
-.informacion-temporadas-alta{
-margin: 10px auto;
+.informacion-temporadas-alta {
+  margin: 10px auto;
 }
 
-.tabla-temporadas-alta{
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
+.tabla-temporadas-alta {
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  border-color: black;
 }
 
-.th-temporadas-alta{
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
+.th-temporadas-alta {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(114, 184, 114);
+  color: black;
 }
 
 /* TEMPORADA MEDIA */
-.informacion-temporadas-media{
-margin: 10px auto;
+.informacion-temporadas-media {
+  margin: 10px auto;
 }
 
-.tabla-temporadas-media{
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
+.tabla-temporadas-media {
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  border-color: black;
 }
 
-.th-temporadas-media{
-padding: 10px;
-text-align: center; 
-background-color:rgb(255, 200, 209);
-color: black;
+.th-temporadas-media {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(255, 200, 209);
+  color: black;
 }
 
 /* TEMPORADA BAJA */
-.informacion-temporadas-baja{
-margin: 10px auto;
+.informacion-temporadas-baja {
+  margin: 10px auto;
 }
 
-.tabla-temporadas-baja{
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
+.tabla-temporadas-baja {
+  width: 100px;
+  height: 50px;
+  border-collapse: collapse;
+  border-color: black;
 }
 
-.th-temporadas-baja{
-padding: 10px;
-text-align: center; 
-background-color:rgb(198, 101, 198);
-color: black;
+.th-temporadas-baja {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(198, 101, 198);
+  color: black;
 }
 
 /* ESTILOS DE LAS TABLAS TARIFAS */
 .general-tarifas {
-width: 80%;
-margin: 10px auto; /* Centra el contenido horizontalmente */
-padding: 20px;
-border: 1px solid #ccc;
-border-radius: 10px;
-color: var(--text-color);
+  width: 80%;
+  margin: 10px auto;
+  /* Centra el contenido horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: var(--text-color);
 }
 
 /* ESTILOS DEL TITULO */
-.titulo{
-text-align: center;
-margin-bottom: 20px;
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .titulo h1 {
-font-size: 24px;
-margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 /* ESTILOS DE LAS TABLAS */
@@ -282,40 +357,42 @@ margin-bottom: 5px;
 .informacion-alta,
 .informacion-media,
 .informacion-baja {
-width: 20%; 
-display: inline-block; /* Para colocar las tablas en columnas */
-vertical-align: top;
-text-align:center; 
-margin-left: 48px;
+  width: 20%;
+  display: inline-block;
+  /* Para colocar las tablas en columnas */
+  vertical-align: top;
+  text-align: center;
+  margin-left: 48px;
 }
 
 .titulo-categoria-alta-especial,
 .titulo-categoria-alta,
 .titulo-categoria-media,
 .titulo-categoria-baja {
-text-align: center; 
+  text-align: center;
 }
 
 /* Alinear texto al centro */
-th, td{
-padding: 10px;
-text-align: center;
+th,
+td {
+  padding: 10px;
+  text-align: center;
 }
 
-.precio{
-padding: 10px;
-text-align: center;
-color: #000;
+.precio {
+  padding: 10px;
+  text-align: center;
+  color: #000;
 }
 
-th { 
-background-color: #333;
-color: #fff;
+th {
+  background-color: #333;
+  color: #fff;
 }
 
 /* Estilos para filas alternadas */
 tr:nth-child(even) {
-background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 /* Transición al hacer hover */
@@ -323,654 +400,705 @@ background-color: #f2f2f2;
 .table-informacion-alta:hover,
 .table-informacion-media:hover,
 .table-informacion-baja:hover {
-transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
-transition: transform 0 ease; /* Restaurar la transición */
+  transform: scale(1.05);
+  /* Aumenta ligeramente el tamaño al pasar el cursor */
+  transition: transform 0 ease;
+  /* Restaurar la transición */
 }
 
 /* Estilos para la sección de admisión de mascotas */
 .admission-section {
-background-color: transparent;
-padding: 50px 0;
+  background-color: transparent;
+  padding: 50px 0;
 }
 
 .admission-section h1 {
-text-align: center;
-font-size: 24px;
-margin-bottom: 5px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .admission-section p {
-text-align: justify;
-margin-bottom: 20px;
+  text-align: justify;
+  margin-bottom: 20px;
 }
 
 .admission-section ul {
-list-style-type: disc;
-padding-left: 20px;
-margin-bottom: 20px;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 .admission-section ul li {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .admission-section ul li:last-child {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* FOOTER */
-.footer {
-width: 100%;
-height: auto;
-background-color: #83B1C2;
-margin-top: 20px;
+
+/* BOTON FLOTANTE REDES SOCIALES */
+
+/* Estilos para el botón flotante */
+.floating-button {
+  position: fixed;
+  bottom: 60px;
+  right: 24px;
+  /* Alineado a la derecha */
+  background-color: #007bff;
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
 }
 
 .iconos-redes {
-display: flex;
-justify-content: center;
-color: black;
+  position: fixed;
+  bottom: 120px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  /* Alinear en una columna */
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.iconos-redes.show {
+  opacity: 1;
 }
 
 .iconos-redes a {
-all: unset;
+  color: white;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #256e99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  /* Agrega una transición suave */
 }
 
-.iconos-redes i {
-font-size: 40px;
-margin: 25px 15px 20px 0;
+.iconos-redes.show a:nth-child(1) {
+  transform: translateY(0px) rotate(0deg);
+  /* Primero icono, no se desplaza */
 }
 
-.iconos-redes a i:hover {
-color: black;/* Cambiar color al pasar el cursor */
-transform: scale(1.1);/* Aumentar tamaño al pasar el cursor */
-cursor: pointer;
+.iconos-redes.show a:nth-child(2) {
+  transform: translateY(0px) rotate(0deg);
+  /* Segundo icono, no se desplaza */
+
+  /* Si le meto 360 grados, queda chevere la animacion */
+
+
+}
+
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #83B1C2;
+}
+
+.p-footer {
+  margin-top: 20px;
 }
 
 .footer p {
-text-align: center;
-color: black;
+
+  text-align: center;
+  color: black;
 }
 
 /* BOTON SUBIR PAGINA */
+
 .ir-arriba {
-font-size: 20px;
-color: black;
-cursor: pointer;
-position: fixed;
-bottom: 10px;
-right: 10px;
-z-index: 2;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: -500px;
+  z-index: 2;
 }
 
 /* ----------------EMPIEZA SECCION DE RESPONSIVE-------------------------------------- */
 
-.btn-link.nav-link.dropdown-toggle{
-margin-top: 0px;
-margin-right: 35px;
+.btn-link.nav-link.dropdown-toggle {
+  margin-top: 0px;
+  margin-right: 35px;
 }
 
 .dropdown-menu.dropdown-menu-end {
-min-width: 70px; 
-width: auto; 
-max-width: 100%; 
-margin-right: -5px;
-margin-bottom: 35px;
-height:78px;
+  min-width: 70px;
+  width: auto;
+  max-width: 100%;
+  margin-right: -5px;
+  margin-bottom: 35px;
+  height: 78px;
 }
 
 /* RESPONSIVE NAV */
 
-.layout__nav-responsive{
-display: none;
-position: absolute;
-appearance: none;
-width: 1.5rem;
-height: 6px;
-border-radius: 4px;
-background-color: black;
-right: 2rem;
-cursor: pointer;
-margin-right: 20px;
+.layout__nav-responsive {
+  display: none;
+  position: absolute;
+  appearance: none;
+  width: 1.5rem;
+  height: 6px;
+  border-radius: 4px;
+  background-color: black;
+  right: 2rem;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
-.layout__nav-responsive::after{
-content: "";
-position: absolute;
-width: 100%;
-height: 6px;
-background-color: black;
-border-radius: 4px;
-top: -0.8rem;
+.layout__nav-responsive::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  border-radius: 4px;
+  top: -0.8rem;
 }
 
-.layout__nav-responsive::before{
-content: "";
-position: absolute;
-width: 100%;
-height: 6px;
-background-color: black;
-border-radius: 4px;
-bottom: -0.8rem;
+.layout__nav-responsive::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  border-radius: 4px;
+  bottom: -0.8rem;
 }
 
 /* RESPONSIVE NAV Y CELULARES */
 
 @media (max-width: 760px) {
 
-.caja-logo{
-margin-left: -55px;
-}
+  .caja-logo {
+    margin-left: -55px;
+  }
 
-.layout__nav-responsive {
-display: flex;
-z-index: 999;
-margin-bottom: 10px;
-margin-right: 55px;
-}
+  .layout__nav-responsive {
+    display: flex;
+    z-index: 999;
+    margin-bottom: 10px;
+    margin-right: 55px;
+  }
 
-.barnav {
-display: none;
-}
+  .barnav {
+    display: none;
+  }
 
-.layout__nav-responsive:checked ~ .barnav {
-z-index: 1;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 0px;
-position: fixed !important;
-top: 80px;
-left: 0;
-width: 100%;
-height: calc(100% - 80px); /* Ajuste de la altura del menú */
-background-color: #b4cbd9;
-color: var(--light-text-color);
-}
+  .layout__nav-responsive:checked~.barnav {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    position: fixed !important;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    /* Ajuste de la altura del menú */
+    background-color: #b4cbd9;
+    color: var(--light-text-color);
+  }
 
-.layout__nav-responsive:checked ~ .barnav .menu {
-flex-grow: 1;
-margin-left: -35px;
-}
+  .layout__nav-responsive:checked~.barnav .menu {
+    flex-grow: 1;
+    margin-left: -35px;
+  }
 
-/* Estilos adicionales para los enlaces del menú */
-.layout__nav-responsive:checked ~ .barnav .menu a {
-color: var(--background);
-font-size: 2.1rem;
-}
+  /* Estilos adicionales para los enlaces del menú */
+  .layout__nav-responsive:checked~.barnav .menu a {
+    color: var(--background);
+    font-size: 2.1rem;
+  }
 
-.no-scroll {
-overflow: hidden;
-}
+  .no-scroll {
+    overflow: hidden;
+  }
 
-.btn-link.nav-link.dropdown-toggle{
-margin-top: 10px;
-margin-right: 35px;
-}
+  .btn-link.nav-link.dropdown-toggle {
+    margin-top: 10px;
+    margin-right: 35px;
+  }
 
-.dropdown-menu.dropdown-menu-end {
-min-width: 70px; 
-width: auto; 
-max-width: 100%; 
-margin-right: -5px;
-margin-bottom: 35px;
-height: 78px;
-}
+  .dropdown-menu.dropdown-menu-end {
+    min-width: 70px;
+    width: auto;
+    max-width: 100%;
+    margin-right: -5px;
+    margin-bottom: 35px;
+    height: 78px;
+  }
 
-/* ESTILO TIPOS DE TARIFAS */
+  /* ESTILO TIPOS DE TARIFAS */
 
-/* Responsive tabla temporada alta A */
-.informacion-temporadas-alta{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada alta A */
+  .informacion-temporadas-alta {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-alta{
-width: 80px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-alta {
+    width: 80px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-alta{
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
-}
+  .th-temporadas-alta {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(114, 184, 114);
+    color: black;
+  }
 
-/* Responsive tabla temporada media M */
-.informacion-temporadas-media{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada media M */
+  .informacion-temporadas-media {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-media{
-width: 180px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-media {
+    width: 180px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-media{
-padding: 10px;
-text-align: center; 
-background-color:rgb(255, 200, 209);
-color: black;
-}
+  .th-temporadas-media {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 200, 209);
+    color: black;
+  }
 
-/* Responsive tabla temporada baja B */
+  /* Responsive tabla temporada baja B */
 
-.informacion-temporadas-baja{
-margin: 10px auto;
-}
+  .informacion-temporadas-baja {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-baja{
-width: 140px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-baja {
+    width: 140px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-baja{
-padding: 10px;
-text-align: center; 
-background-color:rgb(198, 101, 198);
-color: black;
-}
+  .th-temporadas-baja {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(198, 101, 198);
+    color: black;
+  }
 
-/* ESTILOS DE LAS TABLAS */
-.informacion-alta-especial,
-.informacion-alta,
-.informacion-media,
-.informacion-baja {
-width: 20%;
-display: contents;
-vertical-align: top;
-text-align:center;
-margin-left: 48px;
-}
+  /* ESTILOS DE LAS TABLAS */
+  .informacion-alta-especial,
+  .informacion-alta,
+  .informacion-media,
+  .informacion-baja {
+    width: 20%;
+    display: contents;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 48px;
+  }
 
-.table-informacion-alta-especial,
-.table-informacion-alta,
-.table-informacion-media,
-.table-informacion-baja{
-margin-left: 60px;
-margin-bottom: 20px;
-}
+  .table-informacion-alta-especial,
+  .table-informacion-alta,
+  .table-informacion-media,
+  .table-informacion-baja {
+    margin-left: 60px;
+    margin-bottom: 20px;
+  }
 
-.titulo-categoria-alta-especial,
-.titulo-categoria-alta,
-.titulo-categoria-media,
-.titulo-categoria-baja {
-text-align: center; 
-}
+  .titulo-categoria-alta-especial,
+  .titulo-categoria-alta,
+  .titulo-categoria-media,
+  .titulo-categoria-baja {
+    text-align: center;
+  }
 
-th, td{
-padding: 10px;
-text-align: center;
-}
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
 
-.precio{
-padding: 10px;
-text-align: center;
-color: #000;
-}
+  .precio {
+    padding: 10px;
+    text-align: center;
+    color: #000;
+  }
 
-th {
-background-color: #333;
-color: #fff;
-}
+  th {
+    background-color: #333;
+    color: #fff;
+  }
 
-/* Estilos para filas alternadas */
-tr:nth-child(even) {
-background-color: #f2f2f2;
-}
+  /* Estilos para filas alternadas */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
 
-/* Transición al hacer hover */
-.table-informacion-alta-especial:hover,
-.table-informacion-alta:hover,
-.table-informacion-media:hover,
-.table-informacion-baja:hover {
-transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
-transition: transform 0 ease; /* Restaurar la transición */
-}
+  /* Transición al hacer hover */
+  .table-informacion-alta-especial:hover,
+  .table-informacion-alta:hover,
+  .table-informacion-media:hover,
+  .table-informacion-baja:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño al pasar el cursor */
+    transition: transform 0 ease;
+    /* Restaurar la transición */
+  }
 
-.admission-section{
-margin: 0px 15px;
-}
+  .admission-section {
+    margin: 0px 15px;
+  }
 
-.footer {
-height: auto; 
-padding: 20px; 
-}
+  .footer {
+    height: auto;
+    padding: 20px;
+  }
 
-.iconos-redes i {
-font-size: 40px; 
-margin: 15px 10px; 
-}
-
-.footer p {
-font-size: 18px; 
-}
+  .footer p {
+    font-size: 18px;
+  }
 }
 
 /* RESPONSIVE TABLETS EN GENERAL */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-/* RESPONSIVE TIPOS DE TARIFAS */
+  /* RESPONSIVE TIPOS DE TARIFAS */
 
-/* Responsive tabla temporada alta A */
-.informacion-temporadas-alta{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada alta A */
+  .informacion-temporadas-alta {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-alta{
-width: 70px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-alta {
+    width: 70px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-alta{
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
+  .th-temporadas-alta {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(114, 184, 114);
+    color: black;
 
-}
+  }
 
-/* Responsive tabla temporada media M */
-.informacion-temporadas-media{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada media M */
+  .informacion-temporadas-media {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-media{
-width: 140px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-media {
+    width: 140px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-media{
-padding: 10px;
-text-align: center; 
-background-color:rgb(255, 200, 209);
-color: black;
-}
+  .th-temporadas-media {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 200, 209);
+    color: black;
+  }
 
-/* Responsive tabla temporada baja B */
-.informacion-temporadas-baja{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada baja B */
+  .informacion-temporadas-baja {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-baja{
-width: 120px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-baja {
+    width: 120px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-baja{
-padding: 10px;
-text-align: center; 
-background-color:rgb(198, 101, 198);
-color: black;
-}
+  .th-temporadas-baja {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(198, 101, 198);
+    color: black;
+  }
 
-/* RESPONVIE TABLAS TARIFAS */
+  /* RESPONVIE TABLAS TARIFAS */
 
-/* ESTILOS DE LAS TABLAS */
-.informacion-alta-especial,
-.informacion-alta,
-.informacion-media{
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-left: 48px;
-}
+  /* ESTILOS DE LAS TABLAS */
+  .informacion-alta-especial,
+  .informacion-alta,
+  .informacion-media {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 48px;
+  }
 
-.informacion-baja {
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-top: 10px;
-margin-left: 215px;
-}
+  .informacion-baja {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 215px;
+  }
 
-.titulo-categoria-alta-especial,
-.titulo-categoria-alta,
-.titulo-categoria-media,
-.titulo-categoria-baja {
-text-align: center;
-height: 65px;
-}
+  .titulo-categoria-alta-especial,
+  .titulo-categoria-alta,
+  .titulo-categoria-media,
+  .titulo-categoria-baja {
+    text-align: center;
+    height: 65px;
+  }
 }
 
 /* RESPONSIVE IPAD PRO */
 
-@media(min-width:1024px) and (max-width:1366px){
+@media(min-width:1024px) and (max-width:1366px) {
 
-/* RESPONSIVE TIPOS DE TARIFAS */
+  /* RESPONSIVE TIPOS DE TARIFAS */
 
-/* Responsive tabla remporada Alta Especial AE */
-.informacion-temporadas{
-margin: 0 auto;
-}
+  /* Responsive tabla remporada Alta Especial AE */
+  .informacion-temporadas {
+    margin: 0 auto;
+  }
 
-.tabla-temporadas{
-width: 90px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas {
+    width: 90px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas{
-padding: 10px;
-text-align: center;
-background-color: yellow;
-color: black;
-}
+  .th-temporadas {
+    padding: 10px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+  }
 
-/* Responsive tabla temporada alta A */
-.informacion-temporadas-alta{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada alta A */
+  .informacion-temporadas-alta {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-alta{
-width: 85px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-alta {
+    width: 85px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-alta{
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
-}
+  .th-temporadas-alta {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(114, 184, 114);
+    color: black;
+  }
 
-/* Responsive tabla temporada media M */
-.informacion-temporadas-media{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada media M */
+  .informacion-temporadas-media {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-media{
-width: 120px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-media {
+    width: 120px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-media{
-padding: 10px;
-text-align: center; 
-background-color:rgb(255, 200, 209);
-color: black;
-}
+  .th-temporadas-media {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 200, 209);
+    color: black;
+  }
 
-/* Responsive tabla temporada baja B */
+  /* Responsive tabla temporada baja B */
 
-.informacion-temporadas-baja{
-margin: 10px auto;
-}
+  .informacion-temporadas-baja {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-baja{
-width: 100px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-baja {
+    width: 100px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-baja{
-padding: 10px;
-text-align: center; 
-background-color:rgb(198, 101, 198);
-color: black;
+  .th-temporadas-baja {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(198, 101, 198);
+    color: black;
 
-}
+  }
 
-/* RESPONSIVE TABLAS TARIFAS */
+  /* RESPONSIVE TABLAS TARIFAS */
 
-/* ESTILOS DE LAS TABLAS */
-.informacion-alta-especial,
-.informacion-alta,
-.informacion-media{
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-left: 75px;
-}
+  /* ESTILOS DE LAS TABLAS */
+  .informacion-alta-especial,
+  .informacion-alta,
+  .informacion-media {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 75px;
+  }
 
-.informacion-baja {
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-top: 10px;
-margin-left: 310px;
-}
+  .informacion-baja {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 310px;
+  }
 
-.titulo-categoria-alta-especial,
-.titulo-categoria-alta,
-.titulo-categoria-media,
-.titulo-categoria-baja {
-text-align: center;
-height: 65px;
-}
+  .titulo-categoria-alta-especial,
+  .titulo-categoria-alta,
+  .titulo-categoria-media,
+  .titulo-categoria-baja {
+    text-align: center;
+    height: 65px;
+  }
 }
 
 /* RESPONSIVE PARA PORTATILES EN GENERAL */
 @media (min-width: 1250PX) and (max-width: 1920px) {
 
-/* RESPONSIVE TIPOS DE TARIFAS */
+  /* RESPONSIVE TIPOS DE TARIFAS */
 
-/* Responsive tabla remporada Alta Especial AE */
-.informacion-temporadas{
-margin: 0 auto;
-}
+  /* Responsive tabla remporada Alta Especial AE */
+  .informacion-temporadas {
+    margin: 0 auto;
+  }
 
-.tabla-temporadas{
-width: 90px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas {
+    width: 90px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas{
-padding: 10px;
-text-align: center; 
-background-color: yellow;
-color: black;
-}
+  .th-temporadas {
+    padding: 10px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+  }
 
-/* Responsive tabla temporada alta A */
-.informacion-temporadas-alta{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada alta A */
+  .informacion-temporadas-alta {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-alta{
-width: 90px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-alta {
+    width: 90px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-alta{
-padding: 10px;
-text-align: center; 
-background-color: rgb(114, 184, 114);
-color: black;
-}
+  .th-temporadas-alta {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(114, 184, 114);
+    color: black;
+  }
 
-/* Responsive tabla temporada media M */
-.informacion-temporadas-media{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada media M */
+  .informacion-temporadas-media {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-media{
-width: 90px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-media {
+    width: 90px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-media{
-padding: 10px;
-text-align: center; 
-background-color:rgb(255, 200, 209);
-color: black;
-}
+  .th-temporadas-media {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 200, 209);
+    color: black;
+  }
 
-/* Responsive tabla temporada baja B */
-.informacion-temporadas-baja{
-margin: 10px auto;
-}
+  /* Responsive tabla temporada baja B */
+  .informacion-temporadas-baja {
+    margin: 10px auto;
+  }
 
-.tabla-temporadas-baja{
-width: 90px;
-height: 50px;
-border-collapse: collapse;
-border-color: black;
-}
+  .tabla-temporadas-baja {
+    width: 90px;
+    height: 50px;
+    border-collapse: collapse;
+    border-color: black;
+  }
 
-.th-temporadas-baja{
-padding: 10px;
-text-align: center; 
-background-color:rgb(198, 101, 198);
-color: black;
-}
+  .th-temporadas-baja {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(198, 101, 198);
+    color: black;
+  }
 
-/* RESPONVIE TABLAS TARIFAS */
+  /* RESPONVIE TABLAS TARIFAS */
 
-/* ESTILOS DE LAS TABLAS */
-.informacion-alta-especial,
-.informacion-alta,
-.informacion-media{
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-left: 120px;
-}
+  /* ESTILOS DE LAS TABLAS */
+  .informacion-alta-especial,
+  .informacion-alta,
+  .informacion-media {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 120px;
+  }
 
-.informacion-baja {
-width: 20%; 
-display: inline-block; 
-vertical-align: top; 
-text-align:center; 
-margin-top: 10px;
-margin-left: 455px;
-}
+  .informacion-baja {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 455px;
+  }
 
-.titulo-categoria-alta-especial,
-.titulo-categoria-alta,
-.titulo-categoria-media,
-.titulo-categoria-baja {
-text-align: center;
-height: 65px;
-}
+  .titulo-categoria-alta-especial,
+  .titulo-categoria-alta,
+  .titulo-categoria-media,
+  .titulo-categoria-baja {
+    text-align: center;
+    height: 65px;
+  }
 }

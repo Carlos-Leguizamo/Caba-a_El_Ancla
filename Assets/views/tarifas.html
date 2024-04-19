@@ -13,267 +13,300 @@
 </head>
 
 <body>
-    <!-- SECCION DE HEADER  -->
-    <header class="header" id="header">
 
-        <section class="caja-logo">
-            <img src="../img/logotipo_ancla.png" alt="Logo_Ancla" height="90px" class="logo-principal">
+    <!-- LOADER -->
+
+    <body class="hidden">
+        <div class="centrado" id="onload">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- SECCION DE HEADER  -->
+        <header class="header" id="header">
+
+            <section class="caja-logo">
+                <img src="../img/logotipo_ancla.png" alt="Logo_Ancla" height="90px" class="logo-principal">
+            </section>
+
+            <!-- BARRA DE NAVEGACION O NAV -->
+
+            <nav class="nav">
+                <input class="layout__nav-responsive" type="checkbox" />
+                <ul class="barnav">
+                    <li class="menu"><a href="../index.html"><b>INICIO</b></a></li>
+                    <li class="menu"><a href="./cabaña.html"><b>CABAÑA</b></a></li>
+                    <li class="menu"><a href="localizacion.html"><b>LOCALIZACION</b></a></li>
+                    <li class="menu"><a href="./tarifas.html"><b>TARIFAS</b></a></li>
+                </ul>
+
+                <!-- SECCION DEL DARK MODE -->
+
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                    <symbol id="circle-half" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 s1 8 0a8 8 0 0 1 0 16z" />
+                    </symbol>
+
+                    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                        <path
+                            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                    </symbol>
+
+                    <symbol id="sun-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </symbol>
+                </svg>
+
+            </nav>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown w-25" data-bs-theme="light">
+                    <button class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                        data-bs-display="static">
+                        <svg class="bi my-1 theme-icon-active" width="16" height="16" fill="currentColor">
+                            <use href="#circle-half"></use>
+                        </svg>
+                        <span class="d-lg-none ms-2"></span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end px-1" aria-labelledby="bd-theme">
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="light" style="border-radius: 15px; ">
+                                <svg class="bi me-2 opacity-50 theme-icon" width="25" height="25" fill="currentColor">
+                                    <use href="#sun-fill"></use>
+                                </svg>
+                            </button>
+
+                        </li>
+                        <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center"
+                                data-bs-theme-value="dark" style="border-radius: 15px; margin-bottom: 15px;">
+                                <svg class="bi me-2 opacity-50 theme-icon" width="25" height="25" fill="currentColor">
+                                    <use href="#moon-stars-fill"></use>
+                                </svg>
+                            </button>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous">
+                </script>
+            <script src="../js/index.js" defer></script>
+            <script src="../js/letra.js"></script>
+
+        </header>
+
+        <!-- TIPOS DE TEMPORADAS Y TARIFAS -->
+
+        <div class="general-temporadas" style="color: var(--text-color);">
+            <div class="titulo-temporadas">
+                <h1>TIPOS DE TARIFAS</h1>
+                <h2>Categorizacion por abreviatura de ellas</h2>
+            </div>
+
+            <div class="informacion-temporadas" style="color: var(--text-color);">
+                <div class="contenido">
+                    <table border="1" class="tabla-temporadas">
+                        <tr>
+                            <th class="th-temporadas">AE</th>
+                        </tr>
+                    </table>
+                    <p class="texto">
+                        <b>Alta Especial (AE):</b> Noches de fechas específicas: Navidad, fin de año, San Pedro, Fiestas
+                        reales del municipio, etc.
+                    </p>
+                </div>
+            </div>
+
+            <div class="informacion-temporadas-alta" style="color: var(--text-color);">
+                <div class="contenido">
+                    <table border="1" class="tabla-temporadas-alta">
+                        <tr>
+                            <th class="th-temporadas-alta">A</th>
+                        </tr>
+                    </table>
+                    <p class="texto">
+                        <b>Alta (A): </b>Festivos, mes de las madres, mes de amor y amistad, etc.
+                    </p>
+                </div>
+            </div>
+
+            <div class="informacion-temporadas-media" style="color: var(--text-color);">
+                <div class="contenido">
+                    <table border="1" class="tabla-temporadas-media">
+                        <tr>
+                            <th class="th-temporadas-media">M</th>
+                        </tr>
+                    </table>
+                    <p class="texto-media">
+                        <b>Media (M):</b>Las noches de viernes y sábados durante los fines de semana que no coinciden
+                        con
+                        días festivos ni se encuentran dentro de la temporada alta.
+                    </p>
+                </div>
+            </div>
+            <div class="informacion-temporadas-baja" style="color: var(--text-color);">
+                <div class="contenido">
+                    <table border="1" class="tabla-temporadas-baja">
+                        <tr>
+                            <th class="th-temporadas-baja">B</th>
+                        </tr>
+                    </table>
+                    <p class="texto">
+                        <b>Baja (B):</b> Dias entre semana, fines de semana excluyendo las noches de los fines de semana
+                        que
+                        coinciden con feriados largos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCION DE TARIFAS MEDIANTE TABLAS -->
+
+        <div class="general-tarifas" style="color: var(--text-color);">
+            <div class="titulo">
+                <h1>TARIFAS</h1>
+            </div>
+
+            <div class="informacion-alta-especial" style="color: var(--text-color);">
+                <table border="1" class="table-informacion-alta-especial">
+                    <tr>
+                        <th class="titulo-categoria-alta-especial">ALTA ESPECIAL</th>
+                    </tr>
+                    <tr>
+                        <td class="precio">$750.000 </td>
+
+                    </tr>
+                    <tr>
+                        <td>2 DIAS 1 NOCHE</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="informacion-alta" style="color: var(--text-color);">
+
+                <table border="1" class="table-informacion-alta">
+                    <tr>
+                        <th class="titulo-categoria-alta">ALTA</th>
+                    </tr>
+                    <tr>
+                        <td class="precio">$600.000</td>
+
+                    </tr>
+                    <tr>
+                        <td>2 DIAS 1 NOCHE</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="informacion-media" style="color: var(--text-color);">
+
+                <table border="1" class="table-informacion-media">
+                    <tr>
+                        <th class="titulo-categoria-media">MEDIA</th>
+                    </tr>
+                    <tr>
+                        <td class="precio">$500.000</td>
+
+                    </tr>
+                    <tr>
+                        <td>2 DIAS 1 NOCHE</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="informacion-baja" style="color: var(--text-color);">
+
+                <table border="1" class="table-informacion-baja">
+                    <tr>
+                        <th class="titulo-categoria-baja">BAJA</th>
+                    </tr>
+                    <tr>
+                        <td class="precio">$500.000</td>
+
+                    </tr>
+                    <tr>
+                        <td>2 DIAS 1 NOCHE</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- SECCION DE ADMISIÓN DE MASCOTAS -->
+        <section class="admission-section">
+            <div class="container" style="color: var(--text-color);">
+                <h1>ADMISIÓN DE MASCOTAS</h1>
+                <p>En Cabaña Ancla, entendemos y valoramos la importancia de las mascotas en la vida de nuestros
+                    huéspedes.
+                    Es por eso que hemos creado un entorno acogedor que permite que tú y tus compañeros peludos
+                    disfruten de
+                    una estancia segura y cómoda. Sin embargo, para garantizar una experiencia agradable para todos
+                    nuestros
+                    huéspedes, es importante tener en cuenta algunas políticas específicas relacionadas con la admisión
+                    de
+                    mascotas:</p>
+                <ul>
+                    <li>Aceptamos mascotas de tamaño pequeño y mediano.</li>
+                    <li>Se permite un máximo de dos mascotas por cabaña.</li>
+                    <li>Las mascotas deben estar debidamente vacunadas y tener su cartilla al día.</li>
+                    <li>Los dueños son responsables de limpiar después de sus mascotas y mantenerlas bajo control en
+                        todo
+                        momento.</li>
+                </ul>
+                <p>Para más detalles sobre nuestra política de admisión de mascotas, no dudes en contactarnos.</p>
+            </div>
         </section>
 
-        <!-- BARRA DE NAVEGACION O NAV -->
+        <!-- BOTON FLOTANTE REDES SOCIALES -->
+        <div class="floating-button" id="floatingButton">
+            <i class="fas fa-share"></i>
+            <div class="iconos-redes">
+                <a href="https://www.facebook.com/profile.php?id=100076069230788&mibextid=ZbWKwL" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/+573208164195?text=Hola%2C%20estoy%20interesado%20en%20tu%20producto/servicio"
+                    target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
 
-        <nav class="nav">
-            <input class="layout__nav-responsive" type="checkbox" />
-            <ul class="barnav">
-                <li class="menu"><a href="../index.html"><b>INICIO</b></a></li>
-                <li class="menu"><a href="./cabaña.html"><b>CABAÑA</b></a></li>
-                <li class="menu"><a href="localizacion.html"><b>LOCALIZACION</b></a></li>
-                <li class="menu"><a href="./tarifas.html"><b>TARIFAS</b></a></li>
-            </ul>
+        <script src="../js/redes.js"></script>
 
-            <!-- SECCION DEL DARK MODE -->
+        <!-- FOOTER -->
 
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-                <symbol id="circle-half" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 s1 8 0a8 8 0 0 1 0 16z" />
-                </symbol>
+        <footer class="footer">
+            <div class="p-footer">
+                <p>Términos de uso web | Aviso de Privacidad | Política de tratamiento de datos | Reversión de pago |
+                    Política de garantias</p>
+                <p><span id="año"></span> Cabaña El Ancla. Reservados todos los derechos</p>
+            </div>
 
-                <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-                    <path
-                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-                </symbol>
+        </footer>
 
-                <symbol id="sun-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                </symbol>
-            </svg>
-
-        </nav>
-        <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item dropdown w-25" data-bs-theme="light">
-                <button class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                    id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
-                    data-bs-display="static">
-                    <svg class="bi my-1 theme-icon-active" width="16" height="16" fill="currentColor">
-                        <use href="#circle-half"></use>
-                    </svg>
-                    <span class="d-lg-none ms-2"></span>
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end px-1" aria-labelledby="bd-theme">
-                    <li>
-                        <button type="button" class="dropdown-item d-flex align-items-center"
-                            data-bs-theme-value="light" style="border-radius: 15px; ">
-                            <svg class="bi me-2 opacity-50 theme-icon" width="25" height="25" fill="currentColor">
-                                <use href="#sun-fill"></use>
-                            </svg>
-                        </button>
-
-                    </li>
-                    <li>
-                        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                            style="border-radius: 15px; margin-bottom: 15px;">
-                            <svg class="bi me-2 opacity-50 theme-icon" width="25" height="25" fill="currentColor">
-                                <use href="#moon-stars-fill"></use>
-                            </svg>
-                        </button>
-                    </li>
-
-                </ul>
-            </li>
-        </ul>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        <script>
+            const year = new Date().getFullYear();
+            document.getElementById("año").textContent = "© " + year;
         </script>
-        <script src="../js/index.js" defer></script>
-        <script src="../js/letra.js"></script>
 
-    </header>
+        <a class="ir-arriba visible" href="#header" id="botonArriba">
+            <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
 
-    <!-- TIPOS DE TEMPORADAS Y TARIFAS -->
-
-    <div class="general-temporadas" style="color: var(--text-color);">
-        <div class="titulo-temporadas">
-            <h1>TIPOS DE TARIFAS</h1>
-            <h2>Categorizacion por abreviatura de ellas</h2>
-        </div>
-
-        <div class="informacion-temporadas" style="color: var(--text-color);">
-            <div class="contenido">
-                <table border="1" class="tabla-temporadas">
-                    <tr>
-                        <th class="th-temporadas">AE</th>
-                    </tr>
-                </table>
-                <p class="texto">
-                    <b>Alta Especial (AE):</b> Noches de fechas específicas: Navidad, fin de año, San Pedro, Fiestas
-                    reales del municipio, etc.
-                </p>
-            </div>
-        </div>
-
-        <div class="informacion-temporadas-alta" style="color: var(--text-color);">
-            <div class="contenido">
-                <table border="1" class="tabla-temporadas-alta">
-                    <tr>
-                        <th class="th-temporadas-alta">A</th>
-                    </tr>
-                </table>
-                <p class="texto">
-                    <b>Alta (A): </b>Festivos, mes de las madres, mes de amor y amistad, etc.
-                </p>
-            </div>
-        </div>
-
-        <div class="informacion-temporadas-media" style="color: var(--text-color);">
-            <div class="contenido">
-                <table border="1" class="tabla-temporadas-media">
-                    <tr>
-                        <th class="th-temporadas-media">M</th>
-                    </tr>
-                </table>
-                <p class="texto-media">
-                    <b>Media (M):</b>Las noches de viernes y sábados durante los fines de semana que no coinciden con
-                    días festivos ni se encuentran dentro de la temporada alta.
-                </p>
-            </div>
-        </div>
-        <div class="informacion-temporadas-baja" style="color: var(--text-color);">
-            <div class="contenido">
-                <table border="1" class="tabla-temporadas-baja">
-                    <tr>
-                        <th class="th-temporadas-baja">B</th>
-                    </tr>
-                </table>
-                <p class="texto">
-                    <b>Baja (B):</b> Dias entre semana, fines de semana excluyendo las noches de los fines de semana que
-                    coinciden con feriados largos.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECCION DE TARIFAS MEDIANTE TABLAS -->
-
-    <div class="general-tarifas" style="color: var(--text-color);">
-        <div class="titulo">
-            <h1>TARIFAS</h1>
-        </div>
-
-        <div class="informacion-alta-especial" style="color: var(--text-color);">
-            <table border="1" class="table-informacion-alta-especial">
-                <tr>
-                    <th class="titulo-categoria-alta-especial">ALTA ESPECIAL</th>
-                </tr>
-                <tr>
-                    <td class="precio">$750.000 </td>
-
-                </tr>
-                <tr>
-                    <td>2 DIAS 1 NOCHE</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="informacion-alta" style="color: var(--text-color);">
-
-            <table border="1" class="table-informacion-alta">
-                <tr>
-                    <th class="titulo-categoria-alta">ALTA</th>
-                </tr>
-                <tr>
-                    <td class="precio">$600.000</td>
-
-                </tr>
-                <tr>
-                    <td>2 DIAS 1 NOCHE</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="informacion-media" style="color: var(--text-color);">
-
-            <table border="1" class="table-informacion-media">
-                <tr>
-                    <th class="titulo-categoria-media">MEDIA</th>
-                </tr>
-                <tr>
-                    <td class="precio">$500.000</td>
-
-                </tr>
-                <tr>
-                    <td>2 DIAS 1 NOCHE</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="informacion-baja" style="color: var(--text-color);">
-
-            <table border="1" class="table-informacion-baja">
-                <tr>
-                    <th class="titulo-categoria-baja">BAJA</th>
-                </tr>
-                <tr>
-                    <td class="precio">$500.000</td>
-
-                </tr>
-                <tr>
-                    <td>2 DIAS 1 NOCHE</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <!-- SECCION DE ADMISIÓN DE MASCOTAS -->
-    <section class="admission-section">
-        <div class="container" style="color: var(--text-color);">
-            <h1>ADMISIÓN DE MASCOTAS</h1>
-            <p>En Cabaña Ancla, entendemos y valoramos la importancia de las mascotas en la vida de nuestros huéspedes.
-                Es por eso que hemos creado un entorno acogedor que permite que tú y tus compañeros peludos disfruten de
-                una estancia segura y cómoda. Sin embargo, para garantizar una experiencia agradable para todos nuestros
-                huéspedes, es importante tener en cuenta algunas políticas específicas relacionadas con la admisión de
-                mascotas:</p>
-            <ul>
-                <li>Aceptamos mascotas de tamaño pequeño y mediano.</li>
-                <li>Se permite un máximo de dos mascotas por cabaña.</li>
-                <li>Las mascotas deben estar debidamente vacunadas y tener su cartilla al día.</li>
-                <li>Los dueños son responsables de limpiar después de sus mascotas y mantenerlas bajo control en todo
-                    momento.</li>
-            </ul>
-            <p>Para más detalles sobre nuestra política de admisión de mascotas, no dudes en contactarnos.</p>
-        </div>
-    </section>
-</body>
-
-<!-- FOOTER -->
-
-<footer class="footer">
-    <div class="iconos-redes">
-        <a href="https://www.facebook.com/profile.php?id=100076069230788&mibextid=ZbWKwL" target="_blank"><i
-                class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/+573208164195?text=Hola%2C%20estoy%20interesado%20en%20tu%20producto/servicio"
-            target="_blank"><i class="fab fa-whatsapp" target="_blank"></i></a>
-    </div>
-    <p>Términos de uso web | Aviso de Privacidad | Política de tratamiento de datos | Reversión de pago |
-        Política de garantias</p>
-    <p><span id="año"></span> Cabaña El Ancla. Reservados todos los derechos</p>
-</footer>
-
-<script>
-    const year = new Date().getFullYear();
-    document.getElementById("año").textContent = "© " + year;
-</script>
-
-<a class="ir-arriba visible" href="#header" id="botonArriba">
-    <span class="fa-stack">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-    </span>
-</a>
-
-<script src="../js/boton-arriba.js"></script>
-<script src="../js/no-scroll.js"></script>
+        <script src="../js/boton-arriba.js"></script>
+        <script src="../js/no-scroll.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../js/loader.js"></script>
+    </body>
 
 </html>
