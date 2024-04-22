@@ -1440,35 +1440,96 @@ body {
     font-size: 18px;
   }
 
-  /* CONTENEDORES DE VALORES */
+  /* SLIDER DE VALORES */
 
-  .titulo h1 {
-    margin-bottom: 30px;
-  }
-
-  .fila {
-    display: contents;
-
-  }
-
-  .valor {
-    margin-left: 18px;
-    margin-bottom: 10px;
-    width: 500px;
+  /* estilos h1 de el slider de valores */
+  .slider .item h1 {
+    text-align: center;
     font-size: 18px;
   }
 
-  .fila-2 {
-    display: contents;
+  /* estilos p de el slider de valores */
+  .slider .item p {
+    text-align: justify;
+  }
+
+  .slider-container {
+
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 
   }
 
-  .valor-2 {
-    margin-left: 15px;
-    margin-bottom: 10px;
-    width: 500px;
-    font-size: 18px;
+  .slider {
+    width: 80%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    /* Agrega un margen superior */
   }
+
+
+  .item {
+    margin-top: 150%;
+    position: absolute;
+    width: 200px;
+    height: 340px;
+    text-align: justify;
+    background-color: #83B1C2;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 105px);
+    top: 0;
+  }
+
+  .item h1 {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    font-family: sans-serif;
+  }
+
+  .item p {
+    text-align: justify;
+  }
+
+  #next,
+  #prev {
+    margin-top: 110%;
+    position: absolute;
+    top: 40%;
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 28px;
+  }
+
+  #next {
+    left: unset;
+    right: 40px;
+  }
+
+  /* SECCION DE LA RESEÑA */
+
+  .container {
+    max-width: 350px;
+    margin-top: -200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  /* SECCION DEL FOOTER */
+
 
   .footer {
     height: auto;
@@ -1562,4 +1623,251 @@ body {
     color: black;
     font-size: 18px;
   }
+
+  /* SLIDER DE VALORES */
+
+  /* estilos h1 de el slider de valores */
+  .slider .item h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* estilos p de el slider de valores */
+  .slider .item p {
+    text-align: justify;
+  }
+
+  .slider-container {
+
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+  }
+
+  .slider {
+    width: 80%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    /* Agrega un margen superior */
+  }
+
+
+  .item {
+    margin-top: 130%;
+    position: absolute;
+    width: 200px;
+    height: 340px;
+    text-align: justify;
+    background-color: #83B1C2;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 105px);
+    top: 0;
+  }
+
+  .item h1 {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    font-family: sans-serif;
+  }
+
+  .item p {
+    text-align: justify;
+  }
+
+  #next,
+  #prev {
+    margin-top: 90%;
+    position: absolute;
+    top: 40%;
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 28px;
+  }
+
+  #next {
+    left: unset;
+    right: 40px;
+  }
+
+  /* SECCION DE LA RESEÑA */
+  .container {
+    max-width: 350px;
+    margin-top: -200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: none;
+  }
+}
+
+
+/* RESPONSIVE PARA PORTATILES EN GENERAL */
+@media (min-width: 1250PX) and (max-width: 1920px) {
+
+  /* SLIDER DE VALORES */
+
+  /* estilos h1 de el slider de valores */
+  .slider .item h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* estilos p de el slider de valores */
+  .slider .item p {
+    text-align: justify;
+  }
+
+  .slider-container {
+
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+  }
+
+  .slider {
+    width: 80%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    /* Agrega un margen superior */
+  }
+
+
+  .item {
+    margin-top: 98%;
+    position: absolute;
+    width: 200px;
+    height: 340px;
+    text-align: justify;
+    background-color: #83B1C2;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 105px);
+    top: 0;
+  }
+
+  .item h1 {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    font-family: sans-serif;
+  }
+
+  .item p {
+    text-align: justify;
+  }
+
+  #next,
+  #prev {
+    margin-top: 88%;
+    position: absolute;
+    top: 40%;
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 28px;
+  }
+
+  #next {
+    left: unset;
+    right: 40px;
+  }
+
+
+
+  /* SECCION DE LA RESEÑA  */
+
+  .container {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: none;
+  }
+
+  .rating {
+    margin-bottom: 10px;
+  }
+
+  .rating label {
+    margin-right: 14px;
+  }
+
+  .rating input {
+
+    width: 40px;
+  }
+
+  .btn-reseña {
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+
+  .btn-reseña:hover {
+    background-color: #0056b3;
+  }
+
+  .review {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .review .review-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .review .stars {
+    color: gold;
+    margin-bottom: 5px;
+  }
+
+
 }
