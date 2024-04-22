@@ -169,6 +169,8 @@ body {
 
 }
 
+/* SECCION DE ESTILOS DE LOS A DEL NAV */
+
 .menu {
     width: 15%;
     height: 100%;
@@ -176,22 +178,56 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.menu a {
+    margin: 0 15px;
+    font-size: 18px;
+    
+  
+   
+  }
+  .menu a {
+    color: black;
+    /* Color inicial del texto */
     text-decoration: none;
+    position: relative;
+  
+  }
+  
+  .menu a::after {
+    content: '';
+    /* Agregamos un pseudo-elemento para la línea */
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    /* Color de la línea inicialmente transparente */
+    transition: width 0.5s ease;
+    /* Transición suave para el ancho de la línea */
+  }
+  
+  .menu.active a {
     color: black;
-    border-bottom: none;
-    transition: border-bottom 0.5s ease-in-out;
-
-}
-
-.menu:hover a {
+    /* Color del texto cuando está activo */
+  }
+  
+  /* Estilos para los enlaces al pasar el cursor sobre ellos */
+  .menu a:hover {
     color: black;
-    border-bottom: 2px solid black;
-    /*Agrega la linea abajo del texto con el color especificado, al pasar el cursor por
-encima*/
-}
+  }
+  
+  /* Estilos para la línea debajo del texto al pasar el cursor sobre los enlaces */
+  .menu a:hover::after {
+    width: 100%;
+    /* Ancho de la línea al pasar el cursor */
+    background-color: black;
+  }
+  /* Estilos para la línea debajo del texto cuando los enlaces están activos */
+  .menu.active a::after {
+    width: 100%;
+    /* Ancho de la línea cuando está activo */
+    background-color: black;
+  }
 
 .dropdown {
     margin-left: -2em;
