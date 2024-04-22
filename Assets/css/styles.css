@@ -456,7 +456,6 @@ body {
 }
 
 .slider-container {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,6 +470,7 @@ body {
   margin-top: 20px;
   /* Agrega un margen superior */
 }
+
 
 /* .slider{
     position: relative;
@@ -566,6 +566,36 @@ body {
   cursor: pointer;
 
 }
+
+
+.review {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.review-image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.review-content {
+  flex-grow: 1;
+}
+
+.review-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: gold;
+}
+
+.review-body {
+  margin-top: 5px;
+}
+
 
 .btn-reseña:hover {
   background-color: #0056b3;
