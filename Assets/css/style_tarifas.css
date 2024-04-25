@@ -19,14 +19,11 @@
 :root {
   --background: linear-gradient(90deg, white 25%, #256e99 75%);
   --text-color: #000;
-  --light-text-color: #000;
-  /* Color del texto en modo claro */
-  --dark-text-color: #fff;
-  /* Color del texto en modo oscuro */
+  --light-text-color: #000;/* Color del texto en modo claro */
+  --dark-text-color: #fff;/* Color del texto en modo oscuro */
   --light-background: var(--background);
   --dark-background: #212529;
-  --transition: all 0.2s ease-in-out;
-  /* Transiciones */
+  --transition: all 0.2s ease-in-out;/* Transiciones */
 }
 
 #sun-fill {
@@ -169,35 +166,27 @@ body {
   align-items: center;
   margin: 0 15px;
   font-size: 18px;
-  
-
- 
 }
+
 .menu a {
-  color: black;
-  /* Color inicial del texto */
+  color: black;/* Color inicial del texto */
   text-decoration: none;
   position: relative;
-
 }
 
 .menu a::after {
-  content: '';
-  /* Agregamos un pseudo-elemento para la línea */
+  content: '';/* Agregamos un pseudo-elemento para la línea */
   position: absolute;
   left: 0;
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: transparent;
-  /* Color de la línea inicialmente transparente */
-  transition: width 0.5s ease;
-  /* Transición suave para el ancho de la línea */
+  background-color: transparent;/* Color de la línea inicialmente transparente */
+  transition: width 0.5s ease;/* Transición suave para el ancho de la línea */
 }
 
 .menu.active a {
-  color: black;
-  /* Color del texto cuando está activo */
+  color: black;/* Color del texto cuando está activo */
 }
 
 /* Estilos para los enlaces al pasar el cursor sobre ellos */
@@ -207,14 +196,12 @@ body {
 
 /* Estilos para la línea debajo del texto al pasar el cursor sobre los enlaces */
 .menu a:hover::after {
-  width: 100%;
-  /* Ancho de la línea al pasar el cursor */
+  width: 100%;/* Ancho de la línea al pasar el cursor */
   background-color: black;
 }
 /* Estilos para la línea debajo del texto cuando los enlaces están activos */
 .menu.active a::after {
-  width: 100%;
-  /* Ancho de la línea cuando está activo */
+  width: 100%;/* Ancho de la línea cuando está activo */
   background-color: black;
 }
 
@@ -231,8 +218,7 @@ body {
 /* TEMPORADA ALTA ESPECIAL */
 .contenido {
   display: flex;
-  align-items: center;
-  /* Alinea los elementos verticalmente */
+  align-items: center;/* Alinea los elementos verticalmente */
 }
 
 .tabla-temporadas-alta {
@@ -245,7 +231,7 @@ body {
 .th-temporadas-alta {
   padding: 10px;
   text-align: center;
-  background-color: rgb(114, 184, 114);
+  background-color: #ADD8E6;
   color: black;
 }
 
@@ -304,7 +290,7 @@ body {
 .th-temporadas {
   padding: 10px;
   text-align: center;
-  background-color: yellow;
+  background-color: #FFD700;
   color: black;
 }
 
@@ -324,7 +310,7 @@ body {
 .th-temporadas-alta {
   padding: 10px;
   text-align: center;
-  background-color: rgb(114, 184, 114);
+  background-color: #ADD8E6;
   color: black;
 }
 
@@ -343,7 +329,7 @@ body {
 .th-temporadas-media {
   padding: 10px;
   text-align: center;
-  background-color: rgb(255, 200, 209);
+  background-color: #9ACD32;
   color: black;
 }
 
@@ -362,15 +348,14 @@ body {
 .th-temporadas-baja {
   padding: 10px;
   text-align: center;
-  background-color: rgb(198, 101, 198);
+  background-color: #FFB347;
   color: black;
 }
 
 /* ESTILOS DE LAS TABLAS TARIFAS */
 .general-tarifas {
   width: 80%;
-  margin: 10px auto;
-  /* Centra el contenido horizontalmente */
+  margin: 10px auto; /* Centra el contenido horizontalmente */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -394,8 +379,7 @@ body {
 .informacion-media,
 .informacion-baja {
   width: 20%;
-  display: inline-block;
-  /* Para colocar las tablas en columnas */
+  display: inline-block;/* Para colocar las tablas en columnas */
   vertical-align: top;
   text-align: center;
   margin-left: 48px;
@@ -436,10 +420,8 @@ tr:nth-child(even) {
 .table-informacion-alta:hover,
 .table-informacion-media:hover,
 .table-informacion-baja:hover {
-  transform: scale(1.05);
-  /* Aumenta ligeramente el tamaño al pasar el cursor */
-  transition: transform 0 ease;
-  /* Restaurar la transición */
+  transform: scale(1.05);/* Aumenta ligeramente el tamaño al pasar el cursor */
+  transition: transform 0 ease;/* Restaurar la transición */
 }
 
 /* Estilos para la sección de admisión de mascotas */
@@ -480,8 +462,7 @@ tr:nth-child(even) {
 .floating-button {
   position: fixed;
   bottom: 60px;
-  right: 24px;
-  /* Alineado a la derecha */
+  right: 24px;/* Alineado a la derecha */
   background-color: #007bff;
   color: white;
   width: 43px;
@@ -499,8 +480,7 @@ tr:nth-child(even) {
   bottom: 120px;
   right: 28px;
   display: flex;
-  flex-direction: column;
-  /* Alinear en una columna */
+  flex-direction: column;/* Alinear en una columna */
   gap: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -520,22 +500,16 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
-  /* Agrega una transición suave */
+  transition: transform 0.3s ease;/* Agrega una transición suave */
 }
 
 .iconos-redes.show a:nth-child(1) {
-  transform: translateY(0px) rotate(0deg);
-  /* Primero icono, no se desplaza */
+  transform: translateY(0px) rotate(0deg);/* Primero icono, no se desplaza */
 }
 
 .iconos-redes.show a:nth-child(2) {
-  transform: translateY(0px) rotate(0deg);
-  /* Segundo icono, no se desplaza */
-
+  transform: translateY(0px) rotate(0deg);/* Segundo icono, no se desplaza */
   /* Si le meto 360 grados, queda chevere la animacion */
-
-
 }
 
 
@@ -648,8 +622,7 @@ tr:nth-child(even) {
     top: 80px;
     left: 0;
     width: 100%;
-    height: calc(100% - 80px);
-    /* Ajuste de la altura del menú */
+    height: calc(100% - 80px);/* Ajuste de la altura del menú */
     background-color: #b4cbd9;
     color: var(--light-text-color);
   }
@@ -700,7 +673,7 @@ tr:nth-child(even) {
   .th-temporadas-alta {
     padding: 10px;
     text-align: center;
-    background-color: rgb(114, 184, 114);
+    background-color: #ADD8E6;
     color: black;
   }
 
@@ -719,7 +692,7 @@ tr:nth-child(even) {
   .th-temporadas-media {
     padding: 10px;
     text-align: center;
-    background-color: rgb(255, 200, 209);
+    background-color: #9ACD32;
     color: black;
   }
 
@@ -739,7 +712,7 @@ tr:nth-child(even) {
   .th-temporadas-baja {
     padding: 10px;
     text-align: center;
-    background-color: rgb(198, 101, 198);
+    background-color: #FFB347;
     color: black;
   }
 
@@ -797,10 +770,8 @@ tr:nth-child(even) {
   .table-informacion-alta:hover,
   .table-informacion-media:hover,
   .table-informacion-baja:hover {
-    transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño al pasar el cursor */
-    transition: transform 0 ease;
-    /* Restaurar la transición */
+    transform: scale(1.05);/* Aumenta ligeramente el tamaño al pasar el cursor */
+    transition: transform 0 ease;/* Restaurar la transición */
   }
 
   .admission-section {
@@ -838,7 +809,7 @@ tr:nth-child(even) {
   .th-temporadas-alta {
     padding: 10px;
     text-align: center;
-    background-color: rgb(114, 184, 114);
+    background-color: #ADD8E6;
     color: black;
 
   }
@@ -858,7 +829,7 @@ tr:nth-child(even) {
   .th-temporadas-media {
     padding: 10px;
     text-align: center;
-    background-color: rgb(255, 200, 209);
+    background-color: #9ACD32;
     color: black;
   }
 
@@ -877,7 +848,7 @@ tr:nth-child(even) {
   .th-temporadas-baja {
     padding: 10px;
     text-align: center;
-    background-color: rgb(198, 101, 198);
+    background-color: #FFB347;
     color: black;
   }
 
@@ -933,7 +904,7 @@ tr:nth-child(even) {
   .th-temporadas {
     padding: 10px;
     text-align: center;
-    background-color: yellow;
+    background-color: #FFD700;
     color: black;
   }
 
@@ -952,7 +923,7 @@ tr:nth-child(even) {
   .th-temporadas-alta {
     padding: 10px;
     text-align: center;
-    background-color: rgb(114, 184, 114);
+    background-color: #ADD8E6;
     color: black;
   }
 
@@ -971,7 +942,7 @@ tr:nth-child(even) {
   .th-temporadas-media {
     padding: 10px;
     text-align: center;
-    background-color: rgb(255, 200, 209);
+    background-color: #9ACD32;
     color: black;
   }
 
@@ -991,7 +962,7 @@ tr:nth-child(even) {
   .th-temporadas-baja {
     padding: 10px;
     text-align: center;
-    background-color: rgb(198, 101, 198);
+    background-color: #FFB347;
     color: black;
 
   }
@@ -1047,7 +1018,7 @@ tr:nth-child(even) {
   .th-temporadas {
     padding: 10px;
     text-align: center;
-    background-color: yellow;
+    background-color: #FFD700;
     color: black;
   }
 
@@ -1066,7 +1037,7 @@ tr:nth-child(even) {
   .th-temporadas-alta {
     padding: 10px;
     text-align: center;
-    background-color: rgb(114, 184, 114);
+    background-color: #ADD8E6;
     color: black;
   }
 
@@ -1085,7 +1056,7 @@ tr:nth-child(even) {
   .th-temporadas-media {
     padding: 10px;
     text-align: center;
-    background-color: rgb(255, 200, 209);
+    background-color: #9ACD32;
     color: black;
   }
 
@@ -1104,7 +1075,7 @@ tr:nth-child(even) {
   .th-temporadas-baja {
     padding: 10px;
     text-align: center;
-    background-color: rgb(198, 101, 198);
+    background-color: #FFB347;
     color: black;
   }
 
